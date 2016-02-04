@@ -53,7 +53,7 @@ table {
     border-spacing: 0;
 }
 
-/*actual css - Jacob Ekanem*/
+/*actual css*/
 body {
     font-family: 'Open Sans', sans-serif;
     background: #fbfbfb;
@@ -103,26 +103,26 @@ body {
     font-size: 14px;
 }
 
-.outer-menu-container {
+/*.outer-menu-container {
     float: right;
     margin-right: 300px;
-}
-
+}*/
 
 ul.main-menu {
-    min-width: 200px;
+    width: 280px; /*I could use JS to get the width set dynamically to the content*/
+    margin: 0 auto; /*This will make sure we are in the exact middle. Only problem is we have to set a width and that is not dynamic*/
     list-style: none;
     padding-top: 20px;
-    padding-bottom:100px;
-}
-ul.main-menu li {
-    display: block;
-    float:left; 
-    margin: 5px;
-    
+    padding-bottom: 100px;
 }
 
-.main-menu li a{
+ul.main-menu li {
+    display: block;
+    float: left;
+    margin: 5px;
+}
+
+.main-menu li a {
     background: #008080;
     border: 1px solid #006a6a;
     color: #fff;
@@ -134,27 +134,71 @@ ul.main-menu li {
 }
 
 article {
-  display: block;
-  float: left;
-  width: 800px;
-}
-
-article > section {
-  float:left;
-  clear:both;
-  padding: 15px
-}
-
-section > img {
+    display: block;
     float: left;
-    width: 200px;
-    
+    width: 80%;
 }
-section > p {
-    
+
+/*article > section {
+    float: left;
+    clear: both;
+}*/
+
+article section {
+    margin-bottom: 30px;
+    padding: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    -moz-border-radius-topright: 10px;
+    -moz-border-radius-bottomright: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: rgba(0, 106, 106, 0.55);
+}
+
+article section:nth-child(even){
+    background: rgba(0, 106, 106, 0.28);
+}
+
+article section > img {
+    float: left;
+    width: 150px;
+    height: auto;
+    margin: 0 10px 0 0;
+}
+
+article section > p {
+    line-height: 25px;
 }
 
 aside {
-  display:block;
-  float: left;
+    width: 18%;
+    display: block;
+    float: left;
+    margin-left: 2%;
+}
+
+aside .title{
+    background: #006a6a;
+    color: #ffffff;
+    padding: 10px 15px;
+}
+
+aside ul li{
+    padding: 10px 0 10px 0;
+    border-bottom: 1px dotted #cccccc;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-weight: bold;
+    color: #008080;
+    margin: 0 0 10px 0;
+}
+
+h1{
+    font-size: 22px;
+}
+
+a{
+    text-decoration: none;
 }
