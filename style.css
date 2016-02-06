@@ -160,7 +160,7 @@ article section:nth-child(even){
     background: rgba(0, 106, 106, 0.28);
 }
 
-article section > img {
+article section > img, section >img {
     float: left;
     width: 150px;
     height: auto;
@@ -169,6 +169,14 @@ article section > img {
 
 article section > p {
     line-height: 25px;
+}
+
+section h1 {
+    display: inline;
+}
+
+section > p:first-of-type {
+    display: inline;
 }
 
 aside {
@@ -201,4 +209,22 @@ h1{
 
 a{
     text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+#bottom-right {
+    position: fixed;
+    right:0;
+    bottom:0;
+    background-color: red;
+    padding: 15px;
+        -webkit-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border-radius: 10px;
+    
 }
