@@ -13,20 +13,19 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
+figure, figcaption, footer, header,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
     font-size: 100%;
-    font: inherit;
     vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+footer, header, menu, nav, section {
     display: block;
 }
 
@@ -44,7 +43,6 @@ blockquote, q {
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-    content: '';
     content: none;
 }
 
@@ -109,7 +107,7 @@ body {
 }*/
 
 ul.main-menu {
-    width: 280px; /*I could use JS to get the width set dynamically to the content*/
+    width: 320px; /*I could use JS to get the width set dynamically to the content*/
     margin: 0 auto; /*This will make sure we are in the exact middle. Only problem is we have to set a width and that is not dynamic*/
     list-style: none;
     padding-top: 20px;
@@ -124,9 +122,29 @@ ul.main-menu li {
 
 .main-menu li a {
     background: #008080;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#008080), to(#006060));
+    background: -webkit-linear-gradient(top, #008080, #006060);
+    background: -moz-linear-gradient(top, #008080, #006060);
+    background: -ms-linear-gradient(top, #008080, #006060);
+    background: -o-linear-gradient(top, #008080, #006060);
     border: 1px solid #006a6a;
     color: #fff;
-    padding: 2px 5px;
+    padding: 5px 15px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.main-menu li a:hover{
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#006060), to(#008080));
+    background: -webkit-linear-gradient(top, #006060, #008080);
+    background: -moz-linear-gradient(top, #006060, #008080);
+    background: -ms-linear-gradient(top, #006060, #008080);
+    background: -o-linear-gradient(top, #006060, #008080);
+}
+
+.main-menu li a:active{
+    background: #008080 !important;
 }
 
 .clearfix {
@@ -160,11 +178,16 @@ article section:nth-child(even){
     background: rgba(0, 106, 106, 0.28);
 }
 
-article section > img, section >img {
+article > section > img {
     float: left;
     width: 150px;
     height: auto;
     margin: 0 10px 0 0;
+}
+
+aside section >img {
+    width: 100%;
+    margin-bottom: 10px;
 }
 
 article section > p {
@@ -197,6 +220,10 @@ aside ul li{
     border-bottom: 1px dotted #cccccc;
 }
 
+aside section{
+    margin-bottom: 20px;
+}
+
 h1,h2,h3,h4,h5,h6{
     font-weight: bold;
     color: #008080;
@@ -215,6 +242,28 @@ a:hover {
 }
 
 #bottom-right {
+<<<<<<< HEAD
+    color: #fff;
+    position: fixed;
+    right:10px;
+    bottom:10px;
+    background-color: rgba(255, 0, 0, 0.56);
+    padding: 15px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+footer{
+    border-top: 1px dotted #ccc;
+    padding-top: 20px;
+}
+
+footer .copyright{
+    font-size: 11px;
+    font-weight: bold;
+    float: left;
+=======
     position: fixed;
     right:0;
     bottom:0;
@@ -227,4 +276,5 @@ a:hover {
     border-radius: 10px;
     border-radius: 10px;
     
+>>>>>>> upstream/master
 }
