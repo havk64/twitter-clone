@@ -1,9 +1,9 @@
 # The Twitter Clone
-***High-Level Programming - The Twitter Clone Adventure***
+***High-Level Programming - The Twitter Clone Adventure***  
 *(version 0.1.0*)
 
-**Holberton School** First week Front-End project. 
-Our first Team(pair) Project.  
+**Holberton School** first week Front-End project.   
+First Team(pair) Project.  
 
 
 
