@@ -242,7 +242,6 @@ a:hover {
 }
 
 #bottom-right {
-<<<<<<< HEAD
     color: #fff;
     position: fixed;
     right:10px;
@@ -263,18 +262,4 @@ footer .copyright{
     font-size: 11px;
     font-weight: bold;
     float: left;
-=======
-    position: fixed;
-    right:0;
-    bottom:0;
-    background-color: red;
-    padding: 15px;
-        -webkit-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    border-radius: 10px;
-    
->>>>>>> upstream/master
 }
