@@ -107,7 +107,7 @@ body {
 }*/
 
 ul.main-menu {
-    width: 320px; /*I could use JS to get the width set dynamically to the content*/
+    width: 420px; /*I could use JS to get the width set dynamically to the content*/
     margin: 0 auto; /*This will make sure we are in the exact middle. Only problem is we have to set a width and that is not dynamic*/
     list-style: none;
     padding-top: 20px;
