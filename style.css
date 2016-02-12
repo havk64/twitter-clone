@@ -33,6 +33,11 @@ body {
     line-height: 1;
 }
 
+header {
+    width: 94%;
+    padding: 3%;
+}
+
 ol, ul {
     list-style: none;
 }
@@ -59,8 +64,8 @@ body {
 
 .container {
     background: #fff;
-    width: 992px;
     min-height: 600px;
+    max-width:1200px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -154,7 +159,8 @@ ul.main-menu li {
 article {
     display: block;
     float: left;
-    width: 80%;
+    width: 64%;
+    padding: 3%;
 }
 
 /*article > section {
@@ -203,10 +209,10 @@ section > p:first-of-type {
 }
 
 aside {
-    width: 18%;
+    width: 24%;
     display: block;
-    float: left;
-    margin-left: 2%;
+    float: right;
+    padding: 3%;
 }
 
 aside .title{
@@ -254,12 +260,32 @@ a:hover {
 }
 
 footer{
+    width: 94%;
+    padding: 3%;
     border-top: 1px dotted #ccc;
-    padding-top: 20px;
+    text-align: center;
 }
 
 footer .copyright{
     font-size: 11px;
     font-weight: bold;
     float: left;
+}
+
+@media all and (max-width: 768px) {
+    aside {
+        width:94%;
+        padding: 3%;
+        
+    }
+    aside section > img {
+        width: 30%;
+        float: left;
+        
+    }
+    
+    article {
+        width: 94%;
+        padding: 3%;
+    }
 }
