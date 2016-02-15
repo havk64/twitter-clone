@@ -106,14 +106,10 @@ body {
     font-size: 14px;
 }
 
-/*.outer-menu-container {
-    float: right;
-    margin-right: 300px;
-}*/
 
 ul.main-menu {
-    width: 420px; /*I could use JS to get the width set dynamically to the content*/
-    margin: 0 auto; /*This will make sure we are in the exact middle. Only problem is we have to set a width and that is not dynamic*/
+    width: 420px; 
+    margin: 0 auto; 
     list-style: none;
     padding-top: 20px;
     padding-bottom: 100px;
@@ -162,11 +158,6 @@ article {
     width: 64%;
     padding: 3%;
 }
-
-/*article > section {
-    float: left;
-    clear: both;
-}*/
 
 article section {
     margin-bottom: 30px;
