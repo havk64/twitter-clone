@@ -5,6 +5,9 @@
     <title>Twitter clone</title>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="js/post_a_status.js"></script>
+    <script src="js/reply.js"></script>
+    <script src="js/toggle.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Tells the browser the width of screen -->
 </head>
 <body>
@@ -38,6 +41,16 @@
 
     <main>
         <article>
+           <a id="show-hide"  href="#">Post a status</a>
+            <section id="form">
+               <!-- <label for="status"></label> <= In case we can use label for the form... --> 
+                <form id="status" action="" method="post">
+                    <fieldset><textarea name="input" cols="30" rows="10"></textarea>
+                        <label><input name="checkbox" type="checkbox">include location</label>
+                        <button type="submit" value="SEND">Post</button>
+                    </fieldset> 
+                </form>
+            </section>
             <section>
                 <h1>Alexandro de Oliveira</h1>
                 <img src="https://dl.dropboxusercontent.com/u/82815848/Eu/Me.png" alt="Alexandro de Oliveira">
@@ -47,6 +60,14 @@
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis quaerat ullam nihil inventore sint. Quae laudantium animi, odio adipisci placeat, delectus, at vitae eveniet voluptates et iure facere nulla, voluptatum?
                 </p>
                 <div class="clearfix"></div>
+                <a data-index="1" class="replyLink" href="#">Reply</a>
+                <form id="1" action="" method="post" class="reply">
+                    <fieldset>
+                       <textarea name="input"></textarea>
+                        <label><input name="checkbox" type="checkbox"></label>
+                        <button type="submit" value="SEND">Post</button>
+                    </fieldset> 
+                </form>
             </section>
             <section>
                 <h1>Jacob Ekanem</h1> <!-- Put your photo here -->
@@ -54,6 +75,14 @@
                 <p>in 02/05/2016</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero suscipit qui necessitatibus ad fugit voluptatum assumenda vel iusto, adipisci quam! Explicabo totam officia blanditiis. Reprehenderit animi dolorem odit hic voluptatibus.</p>
                 <div class="clearfix"></div>
+                <a data-index="2" class="replyLink" href="#">Reply</a>
+                <form id="2" action="" method="post" class="reply">
+                    <fieldset>
+                       <textarea name="input"></textarea>
+                        <label><input name="checkbox" type="checkbox">include location</label>
+                        <button type="submit" value="SEND">Post</button>
+                    </fieldset> 
+                </form>
             </section>
             <section>
                 <h1>John Cochran</h1>
@@ -64,6 +93,14 @@
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis quaerat ullam nihil inventore sint. Quae laudantium animi, odio adipisci placeat, delectus, at vitae eveniet voluptates et iure facere nulla, voluptatum?
                 </p>
                 <div class="clearfix"></div>
+                <a data-index="3" class="replyLink" href="#">Reply</a>
+                <form id="3" action="" method="post" class="reply">
+                    <fieldset>
+                       <textarea name="input"></textarea>
+                        <label><input name="checkbox" type="checkbox">include location</label>
+                        <button type="submit" value="SEND">Post</button>
+                    </fieldset> 
+                </form>
             </section>
             <section>
                 <h1>John Resig</h1>
@@ -72,6 +109,14 @@
 
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero suscipit qui necessitatibus ad fugit voluptatum assumenda vel iusto, adipisci quam! Explicabo totam officia blanditiis. Reprehenderit animi dolorem odit hic voluptatibus.</p>
                 <div class="clearfix"></div>
+                <a data-index="4" class="replyLink" href="#">Reply</a>
+                <form id="4" action="" method="post" class="reply">
+                    <fieldset>
+                       <textarea name="input"></textarea>
+                        <label><input name="checkbox" type="checkbox">include location</label>
+                        <button type="submit" value="SEND">Post</button>
+                    </fieldset> 
+                </form>
             </section>
         </article>
         <aside>
