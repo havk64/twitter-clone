@@ -3,8 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
   for(var i = 0; i < link.length; i++){
       link[i].addEventListener('click', function(){
           var form = document.getElementById(this.dataset.index);
-          form.style.display = 'block';
-          //form.toggle();
+          form.toggle();
       }, false )
   }
 
