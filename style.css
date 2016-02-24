@@ -274,6 +274,13 @@ footer .copyright{
     display: none;
 }
 
+#form {
+    display:none;
+}
+/*.reply {
+    display:none;
+}*/
+
 @media all and (max-width: 768px) {
     aside {
         width:94%;
