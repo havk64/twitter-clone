@@ -277,9 +277,9 @@ footer .copyright{
 #form {
     display:none;
 }
-/*.reply {
+.reply {
     display:none;
-}*/
+}
 
 @media all and (max-width: 768px) {
     aside {
