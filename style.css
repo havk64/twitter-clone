@@ -34,7 +34,7 @@ body {
     line-height: 1;
 }
 
-header {
+#header {
     width: 94%;
     padding: 3%;
     display:flex;
@@ -42,7 +42,9 @@ header {
     -webkit-flex-direction: row; /* Safari */
     flex-direction: row;
     justify-content: space-between;
-    height: 200px;
+}
+main {
+    margin-top: 100px;
 }
 
 ol, ul {
@@ -92,7 +94,7 @@ p{
 .logo img {
     width: 100%;
     height: auto;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 
 .top-menu {
@@ -294,6 +296,11 @@ footer .copyright{
         align-self:flex-end;
         -webkit-align-self:flex-end;
 }
+#all-images {
+    position:absolute;
+    top:10px;
+    right: 20px;
+}
 
 @media all and (max-width: 768px) {
     aside {
@@ -331,10 +338,21 @@ footer .copyright{
         width: 338px;
         margin-top: auto;
     }
+    #header {
+    position:relative;
+    width: 94%;
+    padding: 3%;
+    display:flex;
+    display: -webkit-flex; /* Safari */
+    -webkit-flex-direction: row; /* Safari */
+    flex-direction: row;
+    justify-content: space-between;
+    }
+
 
 }
 
-@media all and (min-width: 768px) and (max-width: 992px) {
+@media all and (min-width: 768px) and (max-width: 992px) { /*medium size */
     article {
         width: 94%;
         padding: 3%;
@@ -370,4 +388,34 @@ footer .copyright{
     aside .clearfix{
         clear: none;
     }
+    #header {
+        position:fixed;
+        top: 0px;
+        left:0px;
+        right: 0px;
+        height: 50px;
+        z-index: 1000;
+        background-color:white;
+        -webkit-box-shadow: 0px 5px 20px -5px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 5px 20px -5px rgba(0,0,0,0.75);
+        box-shadow: 0px 5px 20px -5px rgba(0,0,0,0.75);
+    }
+}
 
+    @media all and (min-width: 992px) and (max-width: 2600px) { /* medium and large screens */
+    
+        #header {
+        position:fixed; /* Piece of code to be transfered */
+        top: 0px;
+        left:0px;
+        right: 0px;
+        height: 50px;
+        z-index: 1000;
+        background-color:white;
+        -webkit-box-shadow: 0px 5px 20px -5px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 5px 20px -5px rgba(0,0,0,0.75);
+        box-shadow: 0px 5px 20px -5px rgba(0,0,0,0.75); /* ==> End...*/
+    }
+
+        
+}

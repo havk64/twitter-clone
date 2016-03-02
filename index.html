@@ -8,13 +8,14 @@
     <script src="js/post_a_status.js"></script>
     <script src="js/reply.js"></script>
     <script src="js/toggle.js"></script>
+    <script src="js/sticky_smart_header.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Tells the browser the width of screen -->
 </head>
 <body>
 <!--Begin main container-->
 <div class="container">
     <!--Begin header container-->
-    <header>
+    <header id="header">
         <div class="logo">
             <img src="img/logo.png" alt="Logo"/>
             <p>Likable Stats</p>
@@ -35,7 +36,8 @@
                 <li><a href="about.html">About</a></li>
             </ul>
         </div>
-
+        <button id="all-images" type="submit" value="Send">All images on this pages</button>
+        
 
     </header>   <!--End header container-->
 
@@ -44,7 +46,7 @@
            <a id="show-hide"  href="#">Post a status</a>
             <section id="form">
                <!-- <label for="status"></label> <= In case we can use label for the form... --> 
-                <form id="status" action="" method="post">
+                <form id="status" action="POST" method="post">
                     <fieldset><textarea name="input" cols="30" rows="10"></textarea>
                         <label><input name="checkbox" type="checkbox">include location</label>
                         <button type="submit" value="SEND">Post</button>
@@ -61,7 +63,7 @@
                 </p>
                 <div class="clearfix"></div>
                         <a data-index="1" class="replyLink" href="#">Reply</a>
-                <form id="1" action="" method="post" class="reply">
+                <form id="1" action="POST" method="post" class="reply">
                     <fieldset>
                        <textarea name="input"></textarea>
                         <label><input name="checkbox" type="checkbox"></label>
@@ -76,7 +78,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero suscipit qui necessitatibus ad fugit voluptatum assumenda vel iusto, adipisci quam! Explicabo totam officia blanditiis. Reprehenderit animi dolorem odit hic voluptatibus.</p>
                 <div class="clearfix"></div>
                         <a data-index="2" class="replyLink" href="#">Reply</a>
-                <form id="2" action="" method="post" class="reply">
+                <form id="2" action="POST" method="post" class="reply">
                     <fieldset>
                        <textarea name="input"></textarea>
                         <label><input name="checkbox" type="checkbox">include location</label>
@@ -94,7 +96,7 @@
                 </p>
                 <div class="clearfix"></div>
                     <a data-index="3" class="replyLink" href="#">Reply</a>
-                <form id="3" action="" method="post" class="reply">
+                <form id="3" action="POST" method="post" class="reply">
                     <fieldset>
                        <textarea name="input"></textarea>
                         <label><input name="checkbox" type="checkbox">include location</label>
@@ -110,7 +112,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero suscipit qui necessitatibus ad fugit voluptatum assumenda vel iusto, adipisci quam! Explicabo totam officia blanditiis. Reprehenderit animi dolorem odit hic voluptatibus.</p>
                 <div class="clearfix"></div>
             <a data-index="4" class="replyLink" href="#">Reply</a>
-                <form id="4" action="" method="post" class="reply">
+                <form id="4" action="POST" method="post" class="reply">
                     <fieldset>
                        <textarea name="input"></textarea>
                         <label><input name="checkbox" type="checkbox">include location</label>
