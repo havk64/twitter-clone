@@ -301,6 +301,17 @@ footer .copyright{
     top:10px;
     right: 20px;
 }
+img {
+    float: left;
+    width: 150px;
+    height: auto;
+    margin: 0 10px 0 0;
+}
+td {
+    display:table-cell;
+    margin:10px;
+    padding: 5px;
+}
 
 @media all and (max-width: 768px) {
     aside {
