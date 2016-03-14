@@ -49,7 +49,7 @@
         }))
     });
     map.addEventListener('tap', function (e) {
-        var coord = map.screenToGeo(evt.currentPointer.viewportX,
+        var coord = map.screenToGeo(e.currentPointer.viewportX,
         e.currentPointer.viewportY);
         console.log(coord.lat + ', ' + coord.lng);
     });
