@@ -1,0 +1,432 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+#header {
+    width: 94%;
+    padding: 3%;
+    display:flex;
+    display: -webkit-flex; /* Safari */
+    -webkit-flex-direction: row; /* Safari */
+    flex-direction: row;
+    justify-content: space-between;
+}
+main {
+    margin-top: 100px;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*actual css*/
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #fbfbfb;
+}
+
+p{
+    line-height: 21px;
+}
+
+.container {
+    background: #fff;
+    min-height: 600px;
+    max-width:1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.logo {
+    width: 70px;
+    font-size: 11px;
+    text-align: center;
+
+    /*float: left; => for use flexbox, instead of floats*/
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0px;
+}
+
+.top-menu {
+    order: 3;
+    /*float: right; => for use flexbox, instead of floats*/
+    margin-top: 30px;
+}
+
+.top-menu li {
+    display: inline;
+}
+
+.top-menu li:after {
+    content: ' | ';
+}
+
+.top-menu li:last-child:after {
+    content: '';
+}
+
+.top-menu a, .main-menu a {
+    color: #434343;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+
+
+ul.main-menu {
+    width: 420px; /*I could use JS to get the width set dynamically to the content*/
+    margin: 0 auto; /*This will make sure we are in the exact middle. Only problem is we have to set a width and that is not dynamic*/
+    list-style: none;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+ul.main-menu li {
+    display: inline;
+    /*float: left; => for use flexbox, instead of floats*/
+    margin: 5px;
+}
+
+.main-menu li a {
+    background: #008080;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#008080), to(#006060));
+    background: -webkit-linear-gradient(top, #008080, #006060);
+    background: -moz-linear-gradient(top, #008080, #006060);
+    background: -ms-linear-gradient(top, #008080, #006060);
+    background: -o-linear-gradient(top, #008080, #006060);
+    border: 1px solid #006a6a;
+    color: #fff;
+    padding: 5px 15px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.main-menu li a:hover{
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#006060), to(#008080));
+    background: -webkit-linear-gradient(top, #006060, #008080);
+    background: -moz-linear-gradient(top, #006060, #008080);
+    background: -ms-linear-gradient(top, #006060, #008080);
+    background: -o-linear-gradient(top, #006060, #008080);
+}
+
+.main-menu li a:active{
+    background: #008080 !important;
+}
+
+.clearfix {
+    clear: both;
+}
+
+article {
+    display: block;
+    float: left;
+    width: 64%;
+    padding: 3%;
+}
+
+
+
+article section {
+    margin-bottom: 30px;
+    padding: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    -moz-border-radius-topright: 10px;
+    -moz-border-radius-bottomright: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: rgba(0, 106, 106, 0.55);
+}
+
+article section:nth-child(even){
+    background: rgba(0, 106, 106, 0.28);
+}
+
+article > section > img {
+    float: left;
+    width: 150px;
+    height: auto;
+    margin: 0 10px 0 0;
+}
+
+aside section >img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+article section > p {
+    line-height: 25px;
+}
+
+section h1 {
+    display: inline;
+}
+
+section > p:first-of-type {
+    display: inline;
+}
+
+aside {
+    width: 24%;
+    display: block;
+    float: right;
+    padding: 3%;
+}
+
+aside .title{
+    background: #006a6a;
+    color: #ffffff;
+    padding: 10px 15px;
+}
+
+aside ul li{
+    padding: 10px 0 10px 0;
+    border-bottom: 1px dotted #cccccc;
+}
+
+aside section{
+    margin-bottom: 20px;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-weight: bold;
+    color: #008080;
+    margin: 0 0 10px 0;
+}
+
+h1{
+    font-size: 22px;
+}
+
+a{
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+#bottom-right {
+    color: #fff;
+    position: fixed;
+    right:10px;
+    bottom:10px;
+    background-color: rgba(255, 0, 0, 0.56);
+    padding: 15px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+footer{
+    width: 94%;
+    padding: 3%;
+    border-top: 1px dotted #ccc;
+    text-align: center;
+}
+
+footer .copyright{
+    font-size: 11px;
+    font-weight: bold;
+    float: left;
+}
+
+.show-medium{
+    display: none;
+}
+
+#form {
+    display:none;
+}
+.reply {
+    display:none;
+}
+.outer-menu-container {
+        width: 338px;
+        margin-top: auto;
+        align-self:flex-end;
+        -webkit-align-self:flex-end;
+}
+#all-images {
+    position:absolute;
+    top:10px;
+    right: 20px;
+}
+img {
+    float: left;
+    width: 150px;
+    height: auto;
+    margin: 0 10px 0 0;
+}
+td {
+    display:table-cell;
+    margin:10px;
+    padding: 5px;
+}
+
+@media all and (max-width: 768px) {
+    aside {
+        width:94%;
+        padding: 3%;
+        
+    }
+    aside section > img {
+        width: 30%;
+        float: left;
+        
+    }
+    
+    article {
+        width: 94%;
+        padding: 3%;
+    }
+
+    .logo{
+        float: none;
+        margin: 0 auto;
+    }
+
+    .top-menu{
+        margin: 20px auto;
+        width: 170px;
+        /*float: none; => Using flexbox instead*/
+    }
+
+    .main-menu li a{
+        font-size: 12px;
+    }
+
+    .outer-menu-container{
+        width: 338px;
+        margin-top: auto;
+    }
+    #header {
+    position:relative;
+    width: 94%;
+    padding: 3%;
+    display:flex;
+    display: -webkit-flex; /* Safari */
+    -webkit-flex-direction: row; /* Safari */
+    flex-direction: row;
+    justify-content: space-between;
+    }
+
+
+}
+
+@media all and (min-width: 768px) and (max-width: 992px) { /*medium size */
+    article {
+        width: 94%;
+        padding: 3%;
+        float: none;
+        margin-bottom: 0;
+    }
+
+    aside{
+        margin-top: 0;
+        width: 94%;
+        float: none;
+    }
+
+    aside section{
+        width: 32%;
+        float: left;
+        margin-right: 10px;
+    }
+
+    aside section.show-medium{
+        width: 28%;
+        display: block;
+        margin-right: 0;
+        color: #fff;
+        background-color: rgba(255, 0, 0, 0.56);
+        padding: 15px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+    }
+
+
+    aside .clearfix{
+        clear: none;
+    }
+    #header {
+        position:fixed;
+        top: 0px;
+        left:0px;
+        right: 0px;
+        height: 50px;
+        z-index: 1000;
+        background-color:white;
+        -webkit-box-shadow: 0px 5px 20px -5px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 5px 20px -5px rgba(0,0,0,0.75);
+        box-shadow: 0px 5px 20px -5px rgba(0,0,0,0.75);
+    }
+}
+
+    @media all and (min-width: 992px) and (max-width: 2600px) { /* medium and large screens */
+    
+        #header {
+        position:fixed; /* Piece of code to be transfered */
+        top: 0px;
+        left:0px;
+        right: 0px;
+        height: 50px;
+        z-index: 1000;
+        background-color:white;
+        -webkit-box-shadow: 0px 5px 20px -5px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 5px 20px -5px rgba(0,0,0,0.75);
+        box-shadow: 0px 5px 20px -5px rgba(0,0,0,0.75); /* ==> End...*/
+    }
+
+        
+}
