@@ -124,7 +124,7 @@ p{
 
 
 ul.main-menu {
-    width: 420px; /*I could use JS to get the width set dynamically to the content*/
+    width: 520px; /*I could use JS to get the width set dynamically to the content*/
     margin: 0 auto; /*This will make sure we are in the exact middle. Only problem is we have to set a width and that is not dynamic*/
     list-style: none;
     padding-top: 20px;
@@ -181,8 +181,8 @@ article section {
     padding: 10px;
     -webkit-border-top-right-radius: 10px;
     -webkit-border-bottom-right-radius: 10px;
-    -moz-border-radius-topright: 10px;
-    -moz-border-radius-bottomright: 10px;
+    -moz-border-top-right-radius: 10px;
+    -moz-border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     background: rgba(0, 106, 106, 0.55);
