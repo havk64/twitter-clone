@@ -12,7 +12,7 @@
     <script src="js/all_images_data.js"></script>
     <script src="js/load_more.js"></script>
     <script src="js/ajax.js"></script>
-    <script src="https://holberton-weather-api.herokuapp.com/weather.js?jsonp_callback=jsonpCallback"></script>
+    <!-- <script src="https://holberton-weather-api.herokuapp.com/weather.js?jsonp_callback=jsonpCallback"></script> -->
     <script src="js/weather.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Tells the browser the width of screen -->
 </head>
@@ -44,10 +44,12 @@
         </div>
         <button id="all-images" type="submit" value="Send">All images on this pages</button>
         
+        
 
     </header>   <!--End header container-->
 
     <main>
+
         <article>
            <a id="show-hide"  href="#/">Post a status</a>
             <section id="form">
@@ -227,6 +229,8 @@
             <div id="seeMore">See More Statuses</div>
         </article>
         <aside>
+              <p id="pweather">It's <span id="weather">an unknown weather</span> today!</p>
+              <button id="upweather" type="button">Update the Weather</button>
             <section>
                 <h3 class="title">Dennis Ritchie</h3>
                 <img src="https://dl.dropboxusercontent.com/u/82815848/Holberton%20School/ritchie.jpg" alt="Dennis Ritchie">
