@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", loadMore);
+//document.addEventListener("DOMContentLoaded", loadMore); disabling the previous versionn of this function <<<
 
 function loadMore() {
     Handlebars.registerHelper("math", function(lvalue, operator, rvalue, options) {
@@ -27,8 +27,8 @@ function loadMore() {
     
 }
 
-function getContext() {
-    ajaxGet('js/statuses-1.json', function (response) {
+function getContext(n) {
+    ajaxGet('js/statuses-'+n+'.json', function (response) {
         var source = document.getElementById('handlebars-template').textContent;
         var template = Handlebars.compile(source);
         var context = JSON.parse(response);
@@ -37,13 +37,13 @@ function getContext() {
         var div = document.createElement('div'); 
         div.innerHTML = html;
         statuses.appendChild(div);
-        createButton(statuses);
+        createButton(n+1,statuses);
         reset();
         reply();
     });
 }
 
-function createButton(statuses) {
+function createButton(n, statuses) {
     var newbutton = document.createElement('div'); // => Creating new Button <<<
     newbutton.className = 'seeMore';
     newbutton.innerHTML = 'See More Statuses';
@@ -54,7 +54,8 @@ function createButton(statuses) {
         ajaxGet('./status-1.html', function(res){
             var divTemplate = document.getElementById('template');
             divTemplate.innerHTML = res;
-            getContext();
+            console.log(n);  //  Check if variable n is visible in this context <<< 
+            getContext(n);
         })
     })
 
