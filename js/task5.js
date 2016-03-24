@@ -6,9 +6,10 @@ function loadFirst() {
         rvalue = parseFloat(rvalue);
 
         return {
-            "+": lvalue + rvalue,
+            "+": lvalue + rvalue * 10,
         }[operator];
     });
+
     ajaxGet( 'statuses-1.html', function (res) {
         var divTemplate = document.getElementById('template');
         divTemplate.innerHTML = res;
