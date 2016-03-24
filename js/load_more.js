@@ -37,9 +37,10 @@ function getContext(n) {
         var div = document.createElement('div'); 
         div.innerHTML = html;
         statuses.appendChild(div);
-        createButton(n+1,statuses);
         reset();
         reply();
+        if(context.last_page == false)
+            createButton(n+1,statuses);
     });
 }
 
