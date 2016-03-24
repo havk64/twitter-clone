@@ -3,7 +3,7 @@
     "Page": 0,
     "statuses": [
 	{
-	    "name": "Alexandro de Oliveira-Start",
+	    "name": "Alexandro de Oliveira",
 	    "image_path": "img/Alexandro de Oliveira.jpg",
 	    "status": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis quaerat ullam nihil inventore sint. Quae laudantium animi, odio adipisci placeat, delectus, at vitae eveniet voluptates et iure facere nulla, voluptatum?"
 	},
@@ -48,7 +48,7 @@
 	    "status": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero suscipit qui necessitatibus ad fugit voluptatum assumenda vel iusto, adipisci quam! Explicabo totam officia blanditiis. Reprehenderit animi dolorem odit hic voluptatibus."
 	},
 	{
-	    "name": "Brian Fox - End",
+	    "name": "Brian Fox",
 	    "image_path": "img/brian-fox.jpg",
 	    "status": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero suscipit qui necessitatibus ad fugit voluptatum assumenda vel iusto, adipisci quam! Explicabo totam officia blanditiis. Reprehenderit animi dolorem odit hic voluptatibus."
 	}
