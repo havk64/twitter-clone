@@ -51,7 +51,7 @@ function createButton(n, statuses) {
     statuses.appendChild(newbutton);
     newbutton.addEventListener('click', function(){
         newbutton.style.display = 'none';
-        ajaxGet('./status-1.html', function(res){
+        ajaxGet('statuses-1.html', function(res){
             var divTemplate = document.getElementById('template');
             divTemplate.innerHTML = res;
             console.log(n);  //  Check if variable n is visible in this context <<< 

@@ -9,7 +9,7 @@ function loadFirst() {
             "+": lvalue + rvalue,
         }[operator];
     });
-    ajaxGet( './statuses-1.html', function (res) {
+    ajaxGet( 'statuses-1.html', function (res) {
         var divTemplate = document.getElementById('template');
         divTemplate.innerHTML = res;
         getContext(0);
