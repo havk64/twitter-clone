@@ -312,7 +312,7 @@ td {
     margin:10px;
     padding: 5px;
 }
-#seeMore {
+.seeMore {
     background-color: red;
     padding: 10px;
     text-align: center;

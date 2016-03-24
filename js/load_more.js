@@ -12,10 +12,10 @@ function loadMore() {
     var button = document.getElementById('seeMore');
     button.style.cursor = 'pointer';
     button.addEventListener('click', function() {
-        button.style.display = 'none';
-        button.disabled = 'true';
-        button.style.cursor = 'not-allowed';
-        button.style.backgroundColor = 'gray';
+        this.style.display = 'none';
+        this.disabled = 'true';
+        this.style.cursor = 'not-allowed';
+        //button.style.backgroundColor = 'gray';
         setTimeout( function() {
             ajaxGet( './statuses-1.html', function (res) {
                 var divTemplate = document.getElementById('template');
@@ -35,13 +35,31 @@ function getContext() {
         var html = template(context);
         var statuses = document.getElementById('extrastatuses');
         var div = document.createElement('div'); 
-        var newbutton = document.createElement('div'); // => Creating new Button <<<
+    /*    var newbutton = document.createElement('div'); // => Creating new Button <<<
         newbutton.id = 'seeMore';
-        newbutton.innerHTML = 'See More Statuses';
+        newbutton.innerHTML = 'See More Statuses';*/
         div.innerHTML = html;
         statuses.appendChild(div);
-        statuses.appendChild(newbutton);
+        createButton(statuses);
+//        statuses.appendChild(newbutton);
         reset();
         reply();
     });
+}
+
+function createButton(statuses) {
+    var newbutton = document.createElement('div'); // => Creating new Button <<<
+    newbutton.className = 'seeMore';
+    newbutton.innerHTML = 'See More Statuses';
+    newbutton.style.cursor = 'pointer';
+    statuses.appendChild(newbutton);
+//    newbutton.addEventListener('click', function(){
+//        newbutton.style.display = 'none';
+//        ajaxGet('./status-1.html', function(res){
+//            var divTemplate = document.getElementById('template');
+//            divTemplate.innerHTML = res;
+//            getContext();
+//        })
+//    })
+
 }
