@@ -12,7 +12,7 @@ function loadMore() {
     var button = document.getElementById('seeMore');
     button.style.cursor = 'pointer';
     button.addEventListener('click', function() {
-        //button.style.display = 'none';
+        button.style.display = 'none';
         button.disabled = 'true';
         button.style.cursor = 'not-allowed';
         button.style.backgroundColor = 'gray';
@@ -34,9 +34,13 @@ function getContext() {
         var context = JSON.parse(response);
         var html = template(context);
         var statuses = document.getElementById('extrastatuses');
-        var div = document.createElement('div');
+        var div = document.createElement('div'); 
+        var newbutton = document.createElement('div'); // => Creating new Button <<<
+        newbutton.id = 'seeMore';
+        newbutton.innerHTML = 'See More Statuses';
         div.innerHTML = html;
         statuses.appendChild(div);
+        statuses.appendChild(newbutton);
         reset();
         reply();
     });
