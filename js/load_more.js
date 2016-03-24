@@ -1,6 +1,6 @@
 //document.addEventListener("DOMContentLoaded", loadMore); disabling the previous versionn of this function <<<
 
-function loadMore() {
+function loadMore() { // ==> Function used up to task 3. Substituted by the function in file task5.js
     Handlebars.registerHelper("math", function(lvalue, operator, rvalue, options) {
         lvalue = parseFloat(lvalue);
         rvalue = parseFloat(rvalue);
@@ -27,19 +27,19 @@ function loadMore() {
     
 }
 
-function getContext(n) {
+function getContext(n) {  //=> Function to get the context(JSON file) and compile with template to generate valid HTML.
     ajaxGet('js/statuses-'+n+'.json', function (response) {
         var source = document.getElementById('handlebars-template').textContent;
         var template = Handlebars.compile(source);
         var context = JSON.parse(response);
         var html = template(context);
         var statuses = document.getElementById('extrastatuses');
-        var div = document.createElement('div'); 
+        var div = document.createElement('div');  // => Creating new element to be appended to appropriate location.
         div.innerHTML = html;
         statuses.appendChild(div);
-        reset();
-        reply();
-        if(context.last_page == false)
+        reset(); // => Remove eventListener before reapply them.
+        reply(); // => Reapply eventListener to each "reply" element.
+        if(context.last_page == false) // => To stop creating button after read/compile last page. 
             createButton(n+1,statuses);
     });
 }
@@ -49,11 +49,10 @@ function createButton(n, statuses) {
     newbutton.className = 'seeMore';
     newbutton.innerHTML = 'See More Statuses';
     newbutton.style.cursor = 'pointer';
-    statuses.appendChild(newbutton);
+    statuses.appendChild(newbutton); // => Appending the button to the statuses element.
     newbutton.addEventListener('click', function(){
         newbutton.style.display = 'none';
-        console.log(n);  //  Check if variable n is visible in this context <<< 
-        getContext(n);
+         getContext(n);
     })
 
 }
