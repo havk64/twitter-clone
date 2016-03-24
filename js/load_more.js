@@ -35,13 +35,9 @@ function getContext() {
         var html = template(context);
         var statuses = document.getElementById('extrastatuses');
         var div = document.createElement('div'); 
-    /*    var newbutton = document.createElement('div'); // => Creating new Button <<<
-        newbutton.id = 'seeMore';
-        newbutton.innerHTML = 'See More Statuses';*/
         div.innerHTML = html;
         statuses.appendChild(div);
         createButton(statuses);
-//        statuses.appendChild(newbutton);
         reset();
         reply();
     });
@@ -53,13 +49,13 @@ function createButton(statuses) {
     newbutton.innerHTML = 'See More Statuses';
     newbutton.style.cursor = 'pointer';
     statuses.appendChild(newbutton);
-//    newbutton.addEventListener('click', function(){
-//        newbutton.style.display = 'none';
-//        ajaxGet('./status-1.html', function(res){
-//            var divTemplate = document.getElementById('template');
-//            divTemplate.innerHTML = res;
-//            getContext();
-//        })
-//    })
+    newbutton.addEventListener('click', function(){
+        newbutton.style.display = 'none';
+        ajaxGet('./status-1.html', function(res){
+            var divTemplate = document.getElementById('template');
+            divTemplate.innerHTML = res;
+            getContext();
+        })
+    })
 
 }
