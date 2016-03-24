@@ -33,7 +33,10 @@ function getContext() {
         var template = Handlebars.compile(source);
         var context = JSON.parse(response);
         var html = template(context);
-        document.getElementById('extrastatuses').innerHTML = html;
+        var statuses = document.getElementById('extrastatuses');
+        var div = document.createElement('div');
+        div.innerHTML = html;
+        statuses.appendChild(div);
         reset();
         reply();
     });
