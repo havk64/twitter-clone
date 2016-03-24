@@ -13,9 +13,9 @@ function loadMore() {
     button.style.cursor = 'pointer';
     button.addEventListener('click', function() {
         this.style.display = 'none';
-        this.disabled = 'true';
+        //this.disabled = 'true';
         this.style.cursor = 'not-allowed';
-        //button.style.backgroundColor = 'gray';
+        button.style.backgroundColor = 'gray';
         setTimeout( function() {
             ajaxGet( './statuses-1.html', function (res) {
                 var divTemplate = document.getElementById('template');
@@ -51,12 +51,8 @@ function createButton(n, statuses) {
     statuses.appendChild(newbutton);
     newbutton.addEventListener('click', function(){
         newbutton.style.display = 'none';
-        ajaxGet('statuses-1.html', function(res){
-            var divTemplate = document.getElementById('template');
-            divTemplate.innerHTML = res;
-            console.log(n);  //  Check if variable n is visible in this context <<< 
-            getContext(n);
-        })
+        console.log(n);  //  Check if variable n is visible in this context <<< 
+        getContext(n);
     })
 
 }
