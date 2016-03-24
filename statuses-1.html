@@ -1,180 +1,25 @@
-<section>
-    <h1>Alexandro de Oliveira</h1>
-    <img src="https://dl.dropboxusercontent.com/u/82815848/Eu/Me.png" alt="Alexandro de Oliveira">
+    <script id="handlebars-template" type="text/x-handlebars-template"> <!-- > Beginning of Template < -->
+    {{#each statuses}}
+        <section>
+            <h1>{{name}} => {{@index}}</h1>
+            <img src="{{image_path}}" alt="{{name}}">
 
-    <p>in 02/05/2016</p>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis quaerat ullam nihil inventore sint. Quae laudantium animi, odio adipisci placeat, delectus, at vitae eveniet voluptates et iure facere nulla, voluptatum?
-    </p>
-    <div class="clearfix"></div>
-    <a data-index="11" class="replyLink" href="#/">Reply</a>
-    <form id="11" action="POST" method="post" class="reply">
-        <fieldset>
-            <textarea name="input"></textarea>
-            <label>
-                <input name="checkbox" type="checkbox">
-            </label>
-            <button type="submit" value="SEND">Post</button>
-        </fieldset>
-    </form>
-</section>
-<section>
-    <h1>Ken Thompson</h1>
-    <!-- Put your photo here -->
-    <img src="https://dl.dropboxusercontent.com/u/82815848/Holberton%20School/ken-thompson.jpg" alt="Ken Thompson">
-    <p>in 02/05/2016</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero suscipit qui necessitatibus ad fugit voluptatum assumenda vel iusto, adipisci quam! Explicabo totam officia blanditiis. Reprehenderit animi dolorem odit hic voluptatibus.</p>
-    <div class="clearfix"></div>
-    <a data-index="12" class="replyLink" href="#/">Reply</a>
-    <form id="12" action="POST" method="post" class="reply">
-        <fieldset>
-            <textarea name="input"></textarea>
-            <label>
-                <input name="checkbox" type="checkbox">include location</label>
-            <button type="submit" value="SEND">Post</button>
-        </fieldset>
-    </form>
-</section>
-<section>
-    <h1>Dennis Ritchie</h1>
-    <!-- Put your photo here -->
-    <img src="https://dl.dropboxusercontent.com/u/82815848/Holberton%20School/ritchie.jpg" alt="Dennis Ritchie">
-    <p>in 02/05/2016</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero suscipit qui necessitatibus ad fugit voluptatum assumenda vel iusto, adipisci quam! Explicabo totam officia blanditiis. Reprehenderit animi dolorem odit hic voluptatibus.</p>
-    <div class="clearfix"></div>
-    <a data-index="13" class="replyLink" href="#/">Reply</a>
-    <form id="13" action="POST" method="post" class="reply">
-        <fieldset>
-            <textarea name="input"></textarea>
-            <label>
-                <input name="checkbox" type="checkbox">include location</label>
-            <button type="submit" value="SEND">Post</button>
-        </fieldset>
-    </form>
-</section>
-<section>
-    <h1>John Cochran</h1>
-    <img src="https://pbs.twimg.com/profile_images/438577975919788032/tiwAAnkn.jpeg" alt="John Cochran">
-
-    <p>in 02/05/2016</p>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis quaerat ullam nihil inventore sint. Quae laudantium animi, odio adipisci placeat, delectus, at vitae eveniet voluptates et iure facere nulla, voluptatum?
-    </p>
-    <div class="clearfix"></div>
-    <a data-index="14" class="replyLink" href="#/">Reply</a>
-    <form id="14" action="POST" method="post" class="reply">
-        <fieldset>
-            <textarea name="input"></textarea>
-            <label>
-                <input name="checkbox" type="checkbox">include location</label>
-            <button type="submit" value="SEND">Post</button>
-        </fieldset>
-    </form>
-</section>
-<section>
-    <h1>John Resig</h1>
-    <img src="https://admin.thefutureofevents.com/assets/speaker/images/516/medium/JResig_(1).jpg?1408528451" alt="John Resig">
-    <p>in 02/05/2016</p>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero suscipit qui necessitatibus ad fugit voluptatum assumenda vel iusto, adipisci quam! Explicabo totam officia blanditiis. Reprehenderit animi dolorem odit hic voluptatibus.</p>
-    <div class="clearfix"></div>
-    <a data-index="15" class="replyLink" href="#/">Reply</a>
-    <form id="15" action="POST" method="post" class="reply">
-        <fieldset>
-            <textarea name="input"></textarea>
-            <label>
-                <input name="checkbox" type="checkbox">include location</label>
-            <button type="submit" value="SEND">Post</button>
-        </fieldset>
-    </form>
-</section>
-<section>
-    <h1>Alexandro de Oliveira</h1>
-    <img src="https://dl.dropboxusercontent.com/u/82815848/Eu/Me.png" alt="Alexandro de Oliveira">
-
-    <p>in 02/05/2016</p>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis quaerat ullam nihil inventore sint. Quae laudantium animi, odio adipisci placeat, delectus, at vitae eveniet voluptates et iure facere nulla, voluptatum?
-    </p>
-    <div class="clearfix"></div>
-    <a data-index="16" class="replyLink" href="#/">Reply</a>
-    <form id="16" action="POST" method="post" class="reply">
-        <fieldset>
-            <textarea name="input"></textarea>
-            <label>
-                <input name="checkbox" type="checkbox">
-            </label>
-            <button type="submit" value="SEND">Post</button>
-        </fieldset>
-    </form>
-</section>
-<section>
-    <h1>Ken Thompson</h1>
-    <!-- Put your photo here -->
-    <img src="https://dl.dropboxusercontent.com/u/82815848/Holberton%20School/ken-thompson.jpg" alt="Ken Thompson">
-    <p>in 02/05/2016</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero suscipit qui necessitatibus ad fugit voluptatum assumenda vel iusto, adipisci quam! Explicabo totam officia blanditiis. Reprehenderit animi dolorem odit hic voluptatibus.</p>
-    <div class="clearfix"></div>
-    <a data-index="17" class="replyLink" href="#/">Reply</a>
-    <form id="17" action="POST" method="post" class="reply">
-        <fieldset>
-            <textarea name="input"></textarea>
-            <label>
-                <input name="checkbox" type="checkbox">include location</label>
-            <button type="submit" value="SEND">Post</button>
-        </fieldset>
-    </form>
-</section>
-<section>
-    <h1>Dennis Ritchie</h1>
-    <!-- Put your photo here -->
-    <img src="https://dl.dropboxusercontent.com/u/82815848/Holberton%20School/ritchie.jpg" alt="Dennis Ritchie">
-    <p>in 02/05/2016</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero suscipit qui necessitatibus ad fugit voluptatum assumenda vel iusto, adipisci quam! Explicabo totam officia blanditiis. Reprehenderit animi dolorem odit hic voluptatibus.</p>
-    <div class="clearfix"></div>
-    <a data-index="18" class="replyLink" href="#/">Reply</a>
-    <form id="18" action="POST" method="post" class="reply">
-        <fieldset>
-            <textarea name="input"></textarea>
-            <label>
-                <input name="checkbox" type="checkbox">include location</label>
-            <button type="submit" value="SEND">Post</button>
-        </fieldset>
-    </form>
-</section>
-<section>
-    <h1>John Cochran</h1>
-    <img src="https://pbs.twimg.com/profile_images/438577975919788032/tiwAAnkn.jpeg" alt="John Cochran">
-
-    <p>in 02/05/2016</p>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis quaerat ullam nihil inventore sint. Quae laudantium animi, odio adipisci placeat, delectus, at vitae eveniet voluptates et iure facere nulla, voluptatum?
-    </p>
-    <div class="clearfix"></div>
-    <a data-index="19" class="replyLink" href="#/">Reply</a>
-    <form id="19" action="POST" method="post" class="reply">
-        <fieldset>
-            <textarea name="input"></textarea>
-            <label>
-                <input name="checkbox" type="checkbox">include location</label>
-            <button type="submit" value="SEND">Post</button>
-        </fieldset>
-    </form>
-</section>
-<section>
-    <h1>John Resig</h1>
-    <img src="https://admin.thefutureofevents.com/assets/speaker/images/516/medium/JResig_(1).jpg?1408528451" alt="John Resig">
-    <p>in 02/05/2016</p>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero suscipit qui necessitatibus ad fugit voluptatum assumenda vel iusto, adipisci quam! Explicabo totam officia blanditiis. Reprehenderit animi dolorem odit hic voluptatibus.</p>
-    <div class="clearfix"></div>
-    <a data-index="20" class="replyLink" href="#/">Reply</a>
-    <form id="20" action="POST" method="post" class="reply">
-        <fieldset>
-            <textarea name="input"></textarea>
-            <label>
-                <input name="checkbox" type="checkbox">include location</label>
-            <button type="submit" value="SEND">Post</button>
-        </fieldset>
-    </form>
-</section>
+            <p>in 02/05/2016</p>
+            <p>
+                {{status}}
+            </p>
+            <div class="clearfix"></div>
+            <a data-index="{{math @index '+' 11}}" class="replyLink" href="#/">Reply</a>
+            <form id="{{math @index '+' 11}}" action="POST" method="post" class="reply">
+                <fieldset>
+                    <textarea name="input"></textarea>
+                    <label>
+                        <input name="checkbox" type="checkbox">
+                        include location
+                    </label>
+                    <button type="submit" value="SEND">Post</button>
+                </fieldset>
+            </form>
+        </section>
+        {{/each}}
+    </script> <!-- // End of Template -->

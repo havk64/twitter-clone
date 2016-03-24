@@ -1,21 +1,40 @@
 document.addEventListener("DOMContentLoaded", loadMore);
 
 function loadMore() {
+    Handlebars.registerHelper("math", function(lvalue, operator, rvalue, options) {
+        lvalue = parseFloat(lvalue);
+        rvalue = parseFloat(rvalue);
+
+        return {
+            "+": lvalue + rvalue,
+        }[operator];
+    });
     var button = document.getElementById('seeMore');
     button.style.cursor = 'pointer';
-    button.addEventListener('click', function(){
+    button.addEventListener('click', function() {
         //button.style.display = 'none';
         button.disabled = 'true';
         button.style.cursor = 'not-allowed';
         button.style.backgroundColor = 'gray';
         setTimeout( function() {
             ajaxGet( './statuses-1.html', function (res) {
-                var moreStatuses = document.getElementById('extrastatuses');
-                moreStatuses.innerHTML = res;
-                reset();
-                reply();
+                var divTemplate = document.getElementById('template');
+                divTemplate.innerHTML = res;
+                getContext();
             })
-        }, 2000 )
+        }, 200 )
     })
     
+}
+
+function getContext() {
+    ajaxGet('js/statuses-1.json', function (response) {
+        var source = document.getElementById('handlebars-template').textContent;
+        var template = Handlebars.compile(source);
+        var context = JSON.parse(response);
+        var html = template(context);
+        document.getElementById('extrastatuses').innerHTML = html;
+        reset();
+        reply();
+    });
 }
