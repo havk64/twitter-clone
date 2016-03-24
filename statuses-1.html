@@ -1,7 +1,7 @@
     <script id="handlebars-template" type="text/x-handlebars-template"> <!-- > Beginning of Template < -->
     {{#each statuses}}
         <section>
-          <h1>{{name}} => Page: {{../Page }}</h1>
+          <h1>{{name}} => Page: {{../Page }}</h1> <!-- >>> Reference to make visible which JSON file was loaded <<< -->
             <img src="{{image_path}}" alt="{{name}}">
 
             <p>in 02/05/2016</p>
@@ -9,7 +9,7 @@
                 {{status}}
             </p>
             <div class="clearfix"></div>
-            <a data-index="{{math @index '+' ../Page}}" class="replyLink" href="#/">Reply</a>
+            <a data-index="{{math @index '+' ../Page}}" class="replyLink" href="#/">Reply</a> <!-- >>> Using the "math" helper in order to assign sequencial "id" to each element of reply button <<< -->
             <form id="{{math @index '+' ../Page}}" action="POST" method="post" class="reply">
                 <fieldset>
                     <textarea name="input"></textarea>
