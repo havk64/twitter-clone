@@ -39,11 +39,19 @@ function callback(data){ // => Callback function used to wrap the result of requ
             pweather.style.backgroundColor = "white";
             pweather.style.borderStyle =  'solid';
             pweather.style.borderWidth = '1px';
+            pweather.style.borderColor = 'silver';
             break;
         case "rainy":
             console.log("Umbrella!");
             pweather.style.backgroundColor = "gray";
             break;
+        case "foggy":
+            console.log("Can't see anything...");
+            pweather.style.backgroundColor = "#d8d3d3";
+            break;
+        case "warm":
+            console.log("Very hot!");
+            pweather.style.backgroundColor = 'red';
         default:
             console.log("I don't know, for sure!");
             console.log(res);
