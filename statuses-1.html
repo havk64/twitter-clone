@@ -1,10 +1,10 @@
     <script id="handlebars-template" type="text/x-handlebars-template"> <!-- > Beginning of Template < -->
     {{#each statuses}}
         <section>
-          <h1>{{name}} => Page: {{../Page }}</h1> <!-- >>> Reference to make visible which JSON file was loaded <<< -->
+          <h1>{{name}}</h1> 
             <img src="{{image_path}}" alt="{{name}}">
 
-            <p>in 02/05/2016</p>
+            <p>in 02/05/2016 => (from: statuses-{{../Page }}.json)</p>
             <p>
                 {{status}}
             </p>
