@@ -268,11 +268,12 @@ a:hover {
 }
 
 footer{
-    width: 94%;
-    padding: 3%;
+    width: 100%;
+    /padding: 3%;
     border-top: 1px dotted #ccc;
     text-align: center;
-}
+    background-image: url('/img/dark-background.jpg');
+};
 
 footer .copyright{
     font-size: 11px;
