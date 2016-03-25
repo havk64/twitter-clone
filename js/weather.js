@@ -17,14 +17,14 @@ function callback(data){ // => Callback function used to wrap the result of requ
     var pweather = document.getElementById('pweather');
     var res = data.current_weather;
     weather.innerHTML = "an "+res+" weather"; // => Puts the result into the html element.
-    switch ( res ) { // => Case Statement to change color of box background according to weather.
+    switch ( res ) { // => Case Statement to change color of box background and other stuffs, according to weather.
         case "chilly":
             console.log("Chillyyy!!!");
-            pweather.style.backgroundColor = 'aqua';
+            pweather.style.backgroundColor = 'salmon';
             break;
         case "icy":
             console.log("Bruuuuuu!!!");
-            pweather.style.backgroundColor = "green";
+            pweather.style.backgroundColor = "aqua";
             break;
         case "sunny":
             console.log("Yessss!!!");
@@ -37,10 +37,12 @@ function callback(data){ // => Callback function used to wrap the result of requ
         case "snowy":
             console.log("Oh, shhhhhhh...!!");
             pweather.style.backgroundColor = "white";
+            pweather.style.borderStyle =  'solid';
+            pweather.style.borderWidth = '1px';
             break;
         case "rainy":
             console.log("Umbrella!");
-            pweather.style.backgroundColor = "grey";
+            pweather.style.backgroundColor = "gray";
             break;
         default:
             console.log("I don't know, for sure!");
