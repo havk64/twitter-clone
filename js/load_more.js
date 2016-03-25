@@ -53,6 +53,7 @@ function createButton(n, statuses) {
     newbutton.addEventListener('click', function(){
         newbutton.style.display = 'none';
          getContext(n);
+        newbutton.parentNode.removeChild(newbutton); // => I don't need this button anymore, so it can be removed of the html document.
     })
 
 }
