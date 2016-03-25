@@ -7,7 +7,7 @@ function request() { // => Using JSONP to request a cross domain remote JSON fil
     script.type= "text/javascript";
     script.src = "https://holberton-weather-api.herokuapp.com/weather.js?jsonp_callback=callback"; 
     document.body.appendChild(script);
-    script.parentNode.removeChild(script);
+    script.parentNode.removeChild(script); // => Remove the recently inserted script from the body element.
 }
 
 function callback(data){ // => Callback function used to wrap the result of request put it into the html element.
