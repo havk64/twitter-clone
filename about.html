@@ -9,8 +9,7 @@
 <body>
 <!--Begin main container-->
 <div class="container">
-    <!--Begin header container-->
-    <header>
+        <header id="header"> <!-- Start of Header -->
         <div class="logo">
             <img src="img/logo.png" alt="Logo"/>
             <p>Likable Stats</p>
@@ -21,18 +20,22 @@
             <li><a href="#">Logout</a></li>
         </ul>
 
-        <div class="clearfix"></div>
+       <!-- <div class="clearfix"></div> replacing for use flexbox -->
 
         <div class="outer-menu-container">
             <ul class="main-menu">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Home</a></li>
                 <li><a href="#">My statuses</a></li>
                 <li><a href="#">All users</a></li>
+                <li><a href="maps.html">Maps</a></li>
                 <li><a href="about.html">About</a></li>
             </ul>
         </div>
+        <button id="all-images" type="submit" value="Send">All images on this pages</button>
+        
+        
 
-    </header>   <!--End header container-->
+    </header>   <!-- End of Header -->
 
     <main>
         <article>
@@ -55,13 +58,13 @@
         </article>
         <aside>
             <section>
-                <h3 class="title">Jacob Ekanem</h3>
-                <img src="https://pbs.twimg.com/profile_images/670323281560408064/NV3sKne6_400x400.jpg" alt="Jacob picture">
-                <p>Your biography here - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo harum dolorem quasi, officia earum velit libero fuga culpa quaerat sit in nam assumenda impedit tenetur sapiente suscipit architecto nostrum possimus.</p>
+                <h3 class="title">Dennis Ritchie</h3>
+                <img src="img/ritchie.jpg" alt="Denns Ritchie">
+                <p>Father of C language and Unix Operating System</p><p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo harum dolorem quasi, officia earum velit libero fuga culpa quaerat sit in nam assumenda impedit tenetur sapiente suscipit architecto nostrum possimus.</p>
             </section>
             <section>
                 <h3 class="title">Alexandro de Oliveira</h3>
-                <img src="https://dl.dropboxusercontent.com/u/82815848/Eu/Me.png" alt="Jacob picture">
+                <img src="img/Alexandro%20de%20Oliveira.jpg" alt="Jacob picture">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore fugiat officia quam quis vero, ipsum reiciendis et debitis a harum. Nemo distinctio beatae quis delectus autem obcaecati vero hic dolore!</p>
             </section>
         </aside>
