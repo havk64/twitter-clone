@@ -57,7 +57,7 @@ function callback(data){ // => Callback function used to wrap the result of requ
             pweather.style.background = '#87cefa'; // => "Light Sky Blue"
             break;
         case "dark":
-            console.log("Welcome to the Darkness");
+            console.log("Welcome to the Darkness!");
             pweather.style.background = 'black';
             pweather.style.color = 'silver';
             break;
