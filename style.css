@@ -378,6 +378,7 @@ footer .footer-right {
     -webkit-align-self: auto;
     align-self: auto;
 }
+
 @media all and (max-width: 768px) {
     aside {
         width:94%;

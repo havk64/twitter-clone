@@ -69,6 +69,14 @@ function callback(data){ // => Callback function used to wrap the result of requ
             console.log('What is "misty"?');
             pweather.style.backgroundColor = 'salmon';
             break;
+        case "windy":
+            console.log("Sssssssssss!!!");
+            pweather.style.background = 'url(http://cache3.asset-cache.net/gc/463176601-dandelion-wind-drawing-gettyimages.jpg?v=1&c=IWSAsset&k=2&d=C0oeB%2BAfGrIh2FTziA0GmRIBpRdiYW55BxgHhSKMaFDgj3W6EfyPmrrpx2cDBxEj)';
+            pweather.style.backgroundSize = '200px 200px';
+            pweather.style.opacity = '0.7';
+            weather.style.fontStyle = 'bold';
+            weather.style.color = 'green';
+            break;
         default:
             console.log("I don't know...");
             console.log(res);
