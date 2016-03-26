@@ -24,6 +24,7 @@ function callback(data){ // => Callback function used to wrap the result of requ
             break;
         case "icy":
             console.log("Bruuuuuu!!!");
+            pweather.style.background = 'url(img/ice.jpg)';
             pweather.style.backgroundColor = "aqua";
             break;
         case "sunny":
