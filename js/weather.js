@@ -11,12 +11,24 @@ function request() { // => Using JSONP to request a cross domain remote JSON fil
     script.parentNode.removeChild(script); // => Remove the recently inserted script from the body element.
 }
 
+var vowelTest = (function() {
+  var re = /^[aeiou].*/i;
+  return function(s) {
+      console.log("Word is: "+s)
+    return re.test(s);
+  }
+})();
+
+function message(res) {
+    return (vowelTest(res)) ? "an "+res+" weather" : "a "+res+" weather" ;
+} 
+
 function callback(data){ // => Callback function used to wrap the result of request put it into the html element.
     'use strict';
     var weather = document.getElementById('weather');
     var pweather = document.getElementById('pweather');
     var res = data.current_weather;
-    weather.innerHTML = "an "+res+" weather"; // => Puts the result into the html element.
+    weather.innerHTML = message(res); // => Puts the result into the html element.
     switch ( res ) { // => Case Statement to change color of box background and other stuffs, according to weather.
         case "chilly":
             console.log("Chillyyy!!!");
@@ -25,7 +37,6 @@ function callback(data){ // => Callback function used to wrap the result of requ
         case "icy":
             console.log("Bruuuuuu!!!");
             pweather.style.background = 'url(img/ice.jpg)';
-            pweather.style.backgroundColor = "aqua";
             break;
         case "sunny":
             console.log("Yessss!!!");
@@ -33,7 +44,10 @@ function callback(data){ // => Callback function used to wrap the result of requ
             break;
         case "cloudy":
             console.log("It's ok...");
-            pweather.style.backgroundColor = 'silver';
+            pweather.style.background = 'url(img/cloudy.jpg)';
+            pweather.style.borderStyle =  'solid';
+            pweather.style.borderWidth = '1px';
+            pweather.style.borderColor = 'silver';
             break;
         case "snowy":
             console.log("Oh, shhhhhhh...!!");
