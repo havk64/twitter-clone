@@ -39,21 +39,15 @@ function callback(data){ // => Callback function used to wrap the result of requ
             break;
         case "sunny":
             console.log("Yessss!!!");
-            pweather.style.backgroundColor = "Yellow";
+            pweather.style.background = "url(http://bettybread.ca/wp-content/uploads/2013/08/sunny.jpg)";
             break;
         case "cloudy":
             console.log("It's ok...");
             pweather.style.background = 'url(img/cloudy.jpg)';
-            pweather.style.borderStyle =  'solid';
-            pweather.style.borderWidth = '1px';
-            pweather.style.borderColor = 'silver';
             break;
         case "snowy":
             console.log("Oh, shhhhhhh...!!");
             pweather.style.backgroundColor = "white";
-            pweather.style.borderStyle =  'solid';
-            pweather.style.borderWidth = '1px';
-            pweather.style.borderColor = 'silver';
             break;
         case "rainy":
             console.log("Don't forget the Umbrella!");
