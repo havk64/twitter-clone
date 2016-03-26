@@ -11,15 +11,15 @@ function request() { // => Using JSONP to request a cross domain remote JSON fil
     script.parentNode.removeChild(script); // => Remove the recently inserted script from the body element.
 }
 
-var vowelTest = (function() {
-  var re = /^[aeiou].*/i;
+var vowelTest = (function() { // => This functions checks if the value of weather starts with a vowel to show appropriate \
+  var re = /^[aeiou].*/i;     // => message with "a" or "an" before the word. <<<<<<<<<<<<<<======<
   return function(s) {
       console.log("Word is: "+s)
     return re.test(s);
   }
 })();
 
-function message(res) {
+function message(res) { // => Sets the message to html.
     return (vowelTest(res)) ? "an "+res+" weather" : "a "+res+" weather" ;
 } 
 
