@@ -65,8 +65,12 @@ function callback(data){ // => Callback function used to wrap the result of requ
             console.log("Boring day?");
             console.log("Let's building awesome CODE! >:-)");
             pweather.style.backgroundColor = 'grey';
+        case "misty":
+            console.log('What is "misty"?');
+            pweather.style.backgroundColor = 'salmon';
+            break;
         default:
-            console.log("I don't know, for sure!");
+            console.log("I don't know...");
             console.log(res);
     }
 }
