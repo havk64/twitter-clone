@@ -274,16 +274,6 @@ a:hover {
     border-radius: 5px;
 }
 
-/*footer{ => Transfered to class footer <<<
-    width: 100%;
-    color: '#fff';
-    padding: 3%;
-    border-top: 1px dotted #ccc;
-    text-align: center;
-    background-image: url('/img/dark-background.jpg');
-};*/
-
-
 .show-medium{
     display: none;
 }
