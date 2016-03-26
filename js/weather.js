@@ -14,7 +14,6 @@ function request() { // => Using JSONP to request a cross domain remote JSON fil
 var vowelTest = (function() { // => This functions checks if the value of weather starts with a vowel to show appropriate \
   var re = /^[aeiou].*/i;     // => message with "a" or "an" before the word. <<<<<<<<<<<<<<======<
   return function(s) {
-      console.log("Word is: "+s)
     return re.test(s);
   }
 })();
