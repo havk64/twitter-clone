@@ -42,8 +42,8 @@ function callback(data){ // => Callback function used to wrap the result of requ
             pweather.style.borderColor = 'silver';
             break;
         case "rainy":
-            console.log("Umbrella!");
-            pweather.style.backgroundColor = "gray";
+            console.log("Don't forget the Umbrella!");
+            pweather.style.backgroundColor = "#d8d3d3";
             break;
         case "foggy":
             console.log("Can't see anything...");
