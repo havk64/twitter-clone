@@ -53,11 +53,13 @@
     <main>
 
         <article id="article">
-           <a id="show-hide"  href="#/">Post a status</a>
+           <a id="show-hide"  href="#">Post a status</a>
             <section id="form">
                <!-- <label for="status"></label> <= In case we can use label for the form... --> 
-                <form id="status" action="POST" method="post">
-                    <fieldset><textarea name="input" cols="30" rows="10"></textarea>
+                <form id="status" action="POST" method="post" title="post">
+                    <fieldset>
+                      <legend>Post</legend>
+                       <textarea name="input" cols="30" rows="10" title="input"></textarea>
                         <label><input name="checkbox" type="checkbox">include location</label>
                         <button type="submit" value="SEND">Post</button>
                     </fieldset> 
