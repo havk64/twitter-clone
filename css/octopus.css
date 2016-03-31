@@ -95,3 +95,10 @@ p {
 main {
     display: none;
 }
+a {
+    text-decoration: none;
+    color: lightblue;
+}
+a:hover {
+    color: orangered;
+}
