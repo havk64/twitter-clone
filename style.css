@@ -44,6 +44,8 @@ body {
 }
 main {
     margin-top: 100px;
+    margin-bottom: 100px;
+    overflow: hidden
 }
 
 ol, ul {
@@ -68,6 +70,7 @@ table {
 body {
     font-family: 'Open Sans', sans-serif;
     background: #fbfbfb;
+    position: relative;
 }
 
 p{
