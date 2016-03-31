@@ -91,3 +91,7 @@ p {
     -moz-border-radius: 5px;
     border-radius: 5px;
 }
+
+main {
+    display: none;
+}
