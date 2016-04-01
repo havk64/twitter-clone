@@ -112,6 +112,7 @@ main {
 a {
     text-decoration: none;
     color: lightblue;
+    padding: 5px 10px ;
 }
 
 a:hover {
@@ -119,8 +120,6 @@ a:hover {
 }
 
 .footer {
-    display: inline;
-    text-align: center;
     -webkit-order: 0;
     order: 0;
     -webkit-flex: 0 1 auto;
