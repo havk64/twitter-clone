@@ -106,7 +106,7 @@ p {
     border-radius: 5px;
 }
 
-main {
+.hidden {
     display: none;
 }
 a {
