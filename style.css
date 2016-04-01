@@ -393,6 +393,11 @@ legend { /* Hidden the legend element that is used just for accessibility. */
     width: 1px;
     overflow: hidden;
 }
+
+.hidden {
+    display: none;
+}
+
 @media all and (max-width: 768px) {
     aside {
         width:94%;
