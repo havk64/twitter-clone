@@ -86,6 +86,10 @@ function callback(data){ // => Callback function used to wrap the result of requ
             weather.style.fontStyle = 'bold';
             weather.style.color = 'green';
             break;
+        case "hot":
+            console.log("Ouch!");
+            pweather.style.color = 'white';
+            pweather.style.background = 'red';
         default:
             console.log("I don't know...");
             console.log(res);
