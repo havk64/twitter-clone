@@ -330,7 +330,7 @@ td {
     padding: 3%;
     right:0px;
     left: 0px;
-    bottom: 0px;
+    bottom: -70px;
     background: url(img/dark-background.jpg);
     display: -ms-flexbox;
     display: -webkit-flex;
