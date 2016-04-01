@@ -325,6 +325,7 @@ td {
 
 #footer {
     position: absolute;
+    height: 10px;
     width: 94%;
     color: #fff;
     padding: 3%;
@@ -349,7 +350,7 @@ td {
     align-items: center;
 }
 
-footer .footer-left{
+footer > .footer-left{
     font-size: 11px;
     font-weight: bold;
     float: left;
@@ -363,7 +364,8 @@ footer .footer-left{
     align-self: auto;
 }
 
-footer .footer-center {
+footer > .footer-center {
+    text-align: ;
     -webkit-order: 0;
     order: 0;
     -webkit-flex: 0 1 auto;
@@ -373,7 +375,7 @@ footer .footer-center {
     align-self: auto;
 }
 
-footer .footer-right {
+footer > .footer-right {
     -webkit-order: 0;
     order: 0;
     -webkit-flex: 0 1 auto;
@@ -394,9 +396,15 @@ legend { /* Hidden the legend element that is used just for accessibility. */
     overflow: hidden;
 }
 
+#footer-right > a > img {
+    height: 20px;
+    width:20px;
+}
 .hidden {
     display: none;
 }
+
+
 
 @media all and (max-width: 768px) {
     aside {
