@@ -396,7 +396,7 @@ legend { /* Hidden the legend element that is used just for accessibility. */
     overflow: hidden;
 }
 
-#footer-right > a > img {
+.footer-right > a > img {
     height: 20px;
     width:20px;
 }
