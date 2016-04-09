@@ -8,6 +8,6 @@ First Team(pair) Project.
 
 
 
-By ***Alexandro de Oliveira*** [(@havk64)](https://github.com/havk64/) and ***Jacob Ekanem*** [(@sonoftheweb)](https://github.com/sonoftheweb/)
+By ***Alexandro de Oliveira*** [(@havk64)](https://github.com/havk64/) working alone.
 
 *(Still in development...)*
