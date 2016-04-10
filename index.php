@@ -58,7 +58,8 @@
               <h1><?php 
                     if(isset ($_POST['submit']))
                   {
-                      echo( "Hello, " . $_POST['login']); 
+                      	echo( "Hello, " . $_POST['login']); 
+			echo( "Your rot13'd login is: " . str_rot13($_POST['login']))
                       
                   } 
                   else { 
