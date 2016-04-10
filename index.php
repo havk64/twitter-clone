@@ -25,6 +25,11 @@ $users = [
 $Login = $_POST['login']; //Assigning a shorter variable to Post login params.
 $Password = $_POST['password']; //The same for Post password params.
 $check = userExists($Login, $Password, $users); //Assigning the variable to check authentication.
+$Home = "#";
+$MyStatuses = "#";
+$AllUsers = "allusers.html";
+$maps = "maps.html";
+$about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness.html";
 ?>
  <!-- ============================================== -->
  
@@ -76,34 +81,7 @@ if(isset ($Login)) //If the user tried to login.
 <body>
 <!--Begin main container-->
 <div class="container">
-    <!--Begin header container-->
-    <header id="header">
-        <div class="logo">
-            <img src="img/logo.png" alt="Logo"/>
-            <p>Likable Stats</p>
-        </div>
-
-        <ul class="top-menu">
-            <li><a href="#">Edit my profile</a></li>
-            <li><a href="#">Logout</a></li>
-        </ul>
-
-       <!-- <div class="clearfix"></div> replacing for use flexbox -->
-
-        <div class="outer-menu-container">
-            <ul class="main-menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">My statuses</a></li>
-                <li><a href="allusers.html">All users</a></li>
-                <li><a href="maps.html">Maps</a></li>
-                <li><a href="Impossible-Octopus-Fitness/Impossible-Octopus-Fitness.html">About</a></li>
-            </ul>
-        </div>
-        <button id="all-images" type="submit" value="Send">All images on this pages</button>
-        
-        
-
-    </header>   <!--End header container-->
+<?php include("views/header.php"); ?>
 
     <main>
 
@@ -339,25 +317,9 @@ if(isset ($Login)) //If the user tried to login.
             
         </aside>
     </main>
-    <div class="clearfix"></div>
-    <footer id="footer">
-        <div class="footer-left">
-                     
-               <ul class="footer-menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">My statuses</a></li>
-                <li><a href="allusers.html">All users</a></li>
-                <li><a href="maps.html">Maps</a></li>
-                <li><a href="Impossible-Octopus-Fitness/Impossible-Octopus-Fitness.html">About</a></li>
-            </ul>
-        </div>
-        <div class="footer-center"><p>Made for a Holberton School Project, by Alexandro de Oliveira</p></div>
-        <div class="footer-right">
-            <a href="https://github.com/havk64"><img src="img/octopus-github.png" height="20px" alt="Github" /></a>
-            <a href="https://twitter.com/havk64"><img src="img/twitter.png" height="20px" alt="Github" /></a>
-            <a href="https://www.linkedin.com/in/alexandroliveira"><img src="img/linkedin.png" height="25px" alt="Github" /></a>
-        </div>
-    </footer> 
+    
+    <?php include("views/footer.php") ?>
+    
 </div>    <!--End main container-->
 <div id="bottom-right">Attention! This page is in development</div>
 </body>
