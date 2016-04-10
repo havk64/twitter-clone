@@ -1,3 +1,10 @@
+<?php
+$Home = "index.php";
+$MyStatuses = "#";
+$AllUsers = "allusers.html";
+$maps = "maps.html";
+$about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness.html";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,33 +18,7 @@
 <body>
 <!--Begin main container-->
 <div class="container">
-        <header id="header"> <!-- Start of Header -->
-        <div class="logo">
-            <img src="img/logo.png" alt="Logo"/>
-            <p>Likable Stats</p>
-        </div>
-
-        <ul class="top-menu">
-            <li><a href="#">Edit my profile</a></li>
-            <li><a href="#">Logout</a></li>
-        </ul>
-
-       <!-- <div class="clearfix"></div> replacing for use flexbox -->
-
-        <div class="outer-menu-container">
-            <ul class="main-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">My statuses</a></li>
-                <li><a href="#">All users</a></li>
-                <li><a href="maps.html">Maps</a></li>
-                <li><a href="Impossible_Octopus_Fitness.html">About</a></li>
-            </ul>
-        </div>
-        <button id="all-images" type="submit" value="Send">All images on this pages</button>
-        
-        
-
-    </header>   <!-- End of Header -->
+<?php include("views/header.php"); ?>
 
     <main>
         <article>
@@ -68,29 +49,9 @@
         </aside>
     </main>
     <div class="clearfix"></div>
-    <footer id="footer">
-        <div class="footer-left" id="hulk">
-            &copy; 2016 Lovable Stats.             
-               <ul class="footer-menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">My statuses</a></li>
-                <li><a href="allusers.html">All users</a></li>
-                <li><a href="maps.html">Maps</a></li>
-                <li><a href="Impossible_Octopus_Fitness.html">About</a></li>
-            </ul>
-        </div>
-        <div class="footer-center">
-        <p>Made for a Holberton School Project, by Alexandro de Oliveira</p>
-        </div>
-        <div class="footer-right"> 
-            <a href="https://github.com/havk64"><img src="img/octopus-github.png" height="20px" alt="Github" /></a>
-            <a href="https://twitter.com/havk64"><img src="img/twitter.png" height="20px" alt="Github" /></a>
-            <a href="https://www.linkedin.com/in/alexandroliveira"><img src="img/linkedin.png" height="25px" alt="Github" /></a>
-        </div>
     
-        <!--Always clear after a float -->
-        <div class="clearfix"></div>
-    </footer> 
+    <?php include("views/footer.php") ?>
+    
 </div>    <!--End main container-->
 <div id="bottom-right">Be aware! This page is still in beta</div>
 </body>
