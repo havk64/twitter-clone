@@ -1,11 +1,13 @@
-<?php
+<?php //Array of registered users.
 $users = [
     array("id" => 1, "login" => "user1", "password" => "password1", "full_name" => "User 1"),
     array("id" => 2, "login" => "user2", "password" => "password2", "full_name" => "User 2"),
     array("id" => 3, "login" => "user3", "password" => "password3", "full_name" => "User 3"),
   ];
-?>
- <?php
+?> <!-- / End of Array. -->
+ <!-- ============================================== -->
+ 
+ <?php //Defining the function to check the user information.
   function userExists($login, $password, $users) 
   { // Function to check if the user is in the database.
       $ret = '';
@@ -16,12 +18,39 @@ $users = [
     }
       return $ret; //Returning the variable.
   }
-?>
-<?php
+?> <!-- / End of function -->
+ <!-- ============================================== -->
+ 
+<?php //Assigning some variables
 $Login = $_POST['login']; //Assigning a shorter variable to Post login params.
 $Password = $_POST['password']; //The same for Post password params.
 $check = userExists($Login, $Password, $users); //Assigning the variable to check authentication.
 ?>
+ <!-- ============================================== -->
+ 
+<?php //Control flow for authentication.
+$show = '';    
+if(isset ($Login)) //If the user tried to login.
+{
+    if($check) { //If the login is in the database.
+        if($check['password'] == $Password){ //if User login succesfully.
+            $message = "<h1>Hello, " . $check['full_name'] . "</h1><br>";
+            $show = '';
+        } else { //User is ok but wrong password.
+            $message = "<p>Hello, there!<br>(valid user but wrong password!)</p>";
+            $show = True;
+        }
+    } else { //If the user isn't in the database.
+        $message = "Hello, there!<br>(User not found)";
+        $show = True;
+    }
+} else { //If user don't tried to login.
+    $message = "<p>Hello, there!<br>(No login information)</p>";
+    $show = '';
+}
+?> 
+ <!-- ============================================== -->
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,27 +104,6 @@ $check = userExists($Login, $Password, $users); //Assigning the variable to chec
         
 
     </header>   <!--End header container-->
-    <?php
-    $show = '';    
-    if(isset ($Login)) //If the user tried to login.
-    {
-        if($check) { //If the login is in the database.
-            if($check['password'] == $Password){ //if User login succesfully.
-                $message = "<h1>Hello, " . $check['full_name'] . "</h1><br>";
-                $show = '';
-            } else { //User is ok but wrong password.
-                $message = "<p>Hello, there!<br>(valid user but wrong password!)</p>";
-                $show = True;
-            }
-        } else { //If the user isn't in the database.
-            $message = "Hello, there!<br>(User not found)";
-            $show = True;
-        }
-    } else { //If user don't tried to login.
-        $message = "<p>Hello, there!<br>(No login information)</p>";
-        $show = '';
-    }
-    ?>
 
     <main>
 
