@@ -46,9 +46,9 @@
                     <fieldset>
                       <legend>Login</legend>
                        <!-- <textarea name="input" cols="30" rows="10" title="input"></textarea> -->
-                        <label><input name="Login" type="text">Login</label>
-                        <label><input name="Password" type="password">Password</label>
-                        <button type="submit" value="SEND">Send</button>
+                        <label><input name="login" type="text">Login</label>
+                        <label><input name="password" type="password">Password</label>
+                        <button type="submit" name="submit" value="SEND">Send</button>
                     </fieldset> 
                 </form>
             </section>

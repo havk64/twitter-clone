@@ -55,6 +55,16 @@
     <main>
 
         <article id="article">
+              <h1><?php 
+                    if(isset ($_POST['submit']))
+                  {
+                      echo( "Hello, " . $_POST['login']); 
+                      
+                  } 
+                  else { 
+                      echo("Hello, there!");
+                  }
+                  ?></h1>
            <a id="show-hide">Post a status</a>
             <section id="form">
                <!-- <label for="status"></label> <= In case we can use label for the form... --> 
