@@ -59,13 +59,16 @@
                     if(isset ($_POST['submit']))
                   {
                       	echo("<h1>" . "Hello, " . $_POST['login'] . "</h1>");
-                        echo( "Your rot13'd login is: " . str_rot13($_POST['login']))
-                      
+                        echo( "Your rot13'd login is: " . str_rot13($_POST['login']). '<br>');
+                        echo( "The lengh of your login is: " . strlen($_POST['login']));
                   } 
                   else { 
                       echo("Hello, there!");
                   }
                   ?></p>
+                  <br>
+                  <br>
+                  
            <a id="show-hide">Post a status</a>
             <section id="form">
                <!-- <label for="status"></label> <= In case we can use label for the form... --> 
