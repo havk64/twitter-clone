@@ -120,8 +120,8 @@ if(isset ($Login)) //If the user tried to login.
                  echo($message);
              ?></div>
              <br>
-              <p><?php /*
-                    if(isset ($_POST['login']))
+              <p><?php /* ===>>> Code of previous task(4). Left for grade purposes. <<<==
+                    if(isset ($_POST['login'])) 
                   {
                       	echo("<h1>" . "Hello, " . $_POST['login'] . "</h1>");
                         echo( "Your rot13'd login is: " . str_rot13($_POST['login']). '<br>');
@@ -129,7 +129,7 @@ if(isset ($Login)) //If the user tried to login.
                   } 
                   else { 
                       echo("Hello, there!");
-                  }*/
+                  }*/ 
                   ?></p>
                   <br>
                   
