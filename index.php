@@ -7,20 +7,20 @@ $users = [
 ?>
  <?php
   function userExists($login, $password, $users) 
-  {
+  { // Function to check if the user is in the database.
       $ret = '';
       foreach ($users as $user)  {
-          if($login == $user['login']){
-            $ret = $user;
+          if($login == $user['login']){ //If user is in the data base. Return it outside of the loop.
+            $ret = $user; //Can't return inside of loop. Assigning to a variable to return it later.
         }
     }
-      return $ret;
+      return $ret; //Returning the variable.
   }
 ?>
 <?php
-$Login = $_POST['login'];
-$Password = $_POST['password'];
-$check = userExists($Login, $Password, $users);
+$Login = $_POST['login']; //Assigning a shorter variable to Post login params.
+$Password = $_POST['password']; //The same for Post password params.
+$check = userExists($Login, $Password, $users); //Assigning the variable to check authentication.
 ?>
 <!DOCTYPE html>
 <html lang="en">
