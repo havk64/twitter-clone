@@ -75,30 +75,46 @@ $check = userExists($Login, $Password, $users); //Assigning the variable to chec
         
 
     </header>   <!--End header container-->
+    <?php
+    $show = '';    
+    if(isset ($Login)) //If the user tried to login.
+    {
+        if($check) { //If the login is in the database.
+            if($check['password'] == $Password){ //if User login succesfully.
+                $message = "<h1>" . "Hello, " . $check['full_name'] . "</h1><br>";
+                //echo("<h1>" . "Hello, " . $check['full_name'] . "</h1><br>"); // <<< Sucess!!!
+                $show = '';
+            } else { //User is ok but wrong password.
+                $message = "Hello, there! = wrong password.";
+                //echo("Hello, there! = wrong password.");
+                $show = True;
+            }
+        } else { //If the user isn't in the database.
+            $message = "Hello, there! = User not found";
+            //echo("Hello, there! = User not found");
+            $show = True;
+        }
+    } else { //If user don't tried to login.
+        $message = "Hello, there! = Don't trying to login";
+        //echo("Hello, there! = Don't trying to login");
+        $show = '';
+    }
+    ?>
 
     <main>
 
         <article id="article">
-             <p>
-                 <?php
-                    if(isset ($Login)) //If the user tried to login.
-                    {
-                        if($check) { //If the login is in the database.
-                            if($check['password'] == $Password){ //if User login succesfully.
-                                echo("<h1>" . "Hello, " . $check['full_name'] . "</h1><br>"); // <<< Sucess!!!
-                            } else { //User is ok but wrong password.
-                                echo("Hello, there! = wrong password.");
-                                //Invalid Credentials!!!
-                            }
-                        } else { //If the user isn't in the database.
-                            echo("Hello, there! = User not found");
-                            ///Invalid Credentials!!!
-                        }
-                    } else { //If user don't tried to login.
-                        echo("Hello, there! = Don't trying to login");
-                    }
-                 ?>
-             </p>
+            <div class="seeMore" style="display:
+            <?php 
+                         if( $show ) {
+                             echo("block;");
+                         } else {
+                             echo("none;");
+                         }
+                     ?>">Invalid credentials</div>
+             <p><?php
+                 echo($message);
+             ?></p>
              <br>
               <p><?php /*
                     if(isset ($_POST['login']))
@@ -111,7 +127,6 @@ $check = userExists($Login, $Password, $users); //Assigning the variable to chec
                       echo("Hello, there!");
                   }*/
                   ?></p>
-                  <br>
                   <br>
                   
            <a id="show-hide">Post a status</a>
