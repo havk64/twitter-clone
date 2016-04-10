@@ -17,6 +17,11 @@ $users = [
       return $ret;
   }
 ?>
+<?php
+$Login = $_POST['login'];
+$Password = $_POST['password'];
+$check = userExists($Login, $Password, $users);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -76,9 +81,6 @@ $users = [
         <article id="article">
              <p>
                  <?php
-                 $Login = $_POST['login'];
-                 $Password = $_POST['password'];
-                 $check = userExists($Login, $Password, $users);
                     if(isset ($Login)) //If the user tried to login.
                     {
                         if($check) { //If the login is in the database.
