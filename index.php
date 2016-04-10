@@ -55,17 +55,17 @@
     <main>
 
         <article id="article">
-              <h1><?php 
+              <p><?php 
                     if(isset ($_POST['submit']))
                   {
-                      	echo( "Hello, " . $_POST['login']); 
+                      	echo("<h1>" . "Hello, " . $_POST['login'] . "</h1>");	
 			echo( "Your rot13'd login is: " . str_rot13($_POST['login']))
                       
                   } 
                   else { 
                       echo("Hello, there!");
                   }
-                  ?></h1>
+                  ?></p>
            <a id="show-hide">Post a status</a>
             <section id="form">
                <!-- <label for="status"></label> <= In case we can use label for the form... --> 
