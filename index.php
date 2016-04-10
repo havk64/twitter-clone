@@ -1,3 +1,22 @@
+<?php
+$users = [
+    array("id" => 1, "login" => "user1", "password" => "password1", "full_name" => "User 1"),
+    array("id" => 2, "login" => "user2", "password" => "password2", "full_name" => "User 2"),
+    array("id" => 3, "login" => "user3", "password" => "password3", "full_name" => "User 3"),
+  ];
+?>
+ <?php
+  function userExists($login, $password, $users) 
+  {
+      $ret = '';
+      foreach ($users as $user)  {
+          if($login == $user['login']){
+            $ret = $user;
+        }
+    }
+      return $ret;
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,25 +40,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Tells the browser the width of screen -->
 </head>
 <body>
-<?php
-$users = [
-    array("id" => 1, "login" => "user1", "password" => "password1", "full_name" => "User 1"),
-    array("id" => 2, "login" => "user2", "password" => "password2", "full_name" => "User 2"),
-    array("id" => 3, "login" => "user3", "password" => "password3", "full_name" => "User 3"),
-  ];
-?>
- <?php
-  function userExists($login, $password, $users) 
-  {
-      $ret = '';
-      foreach ($users as $user)  {
-          if($login == $user['login']){
-            $ret = $user;
-        }
-    }
-      return $ret;
-  }
-?>
 <!--Begin main container-->
 <div class="container">
     <!--Begin header container-->
