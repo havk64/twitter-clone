@@ -3,11 +3,11 @@
         <div class="footer-left">
                      
                <ul class="footer-menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">My statuses</a></li>
-                <li><a href="allusers.html">All users</a></li>
-                <li><a href="maps.html">Maps</a></li>
-                <li><a href="Impossible-Octopus-Fitness/Impossible-Octopus-Fitness.html">About</a></li>
+                <li><a href="<?php echo($home);?>">Home</a></li>
+                <li><a href="<?php echo($mystatuses);?>">My statuses</a></li>
+                <li><a href="<?php echo ($allusers)?>">All users</a></li>
+                <li><a href="<?php echo($maps)?>">Maps</a></li>
+                <li><a href="<?php echo($about)?>">About</a></li>
             </ul>
         </div>
         <div class="footer-center"><p>Made for a Holberton School Project, by Alexandro de Oliveira</p></div>

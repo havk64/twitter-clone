@@ -25,9 +25,9 @@ $users = [
 $Login = $_POST['login']; //Assigning a shorter variable to Post login params.
 $Password = $_POST['password']; //The same for Post password params.
 $check = userExists($Login, $Password, $users); //Assigning the variable to check authentication.
-$Home = "#";
-$MyStatuses = "#";
-$AllUsers = "allusers.html";
+$home = "#";
+$mystatuses = "#";
+$allusers = "allusers.html";
 $maps = "maps.html";
 $about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness.html";
 ?>
