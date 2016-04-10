@@ -21,6 +21,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Tells the browser the width of screen -->
 </head>
 <body>
+<?php
+$users = [
+    array("id" => 1, "login" => "user1", "password" => "password1", "full_name" => "User 1"),
+    array("id" => 2, "login" => "user2", "password" => "password2", "full_name" => "User 2"),
+    array("id" => 3, "login" => "user3", "password" => "password3", "full_name" => "User 3"),
+  ];
+?>
+ <?php
+  function userExists($login, $password, $users) 
+  {
+      $ret = '';
+      foreach ($users as $user)  {
+          if($login == $user['login']){
+            $ret = $user;
+        }
+    }
+      return $ret;
+  }
+?>
 <!--Begin main container-->
 <div class="container">
     <!--Begin header container-->
@@ -55,8 +74,32 @@
     <main>
 
         <article id="article">
-              <p><?php 
-                    if(isset ($_POST['submit']))
+             <p>
+                 <?php
+                 $Login = $_POST['login'];
+                 $Password = $_POST['password'];
+                 $check = userExists($Login, $Password, $users);
+                    if(isset ($Login)) //If the user tried to login.
+                    {
+                        if($check) { //If the login is in the database.
+                            if($check['password'] == $Password){ //if User login succesfully.
+                                echo("<h1>" . "Hello, " . $check['full_name'] . "</h1><br>"); // <<< Sucess!!!
+                            } else { //User is ok but wrong password.
+                                echo("Hello, there! = wrong password.");
+                                //Invalid Credentials!!!
+                            }
+                        } else { //If the user isn't in the database.
+                            echo("Hello, there! = User not found");
+                            ///Invalid Credentials!!!
+                        }
+                    } else { //If user don't tried to login.
+                        echo("Hello, there! = Don't trying to login");
+                    }
+                 ?>
+             </p>
+             <br>
+              <p><?php /*
+                    if(isset ($_POST['login']))
                   {
                       	echo("<h1>" . "Hello, " . $_POST['login'] . "</h1>");
                         echo( "Your rot13'd login is: " . str_rot13($_POST['login']). '<br>');
@@ -64,7 +107,7 @@
                   } 
                   else { 
                       echo("Hello, there!");
-                  }
+                  }*/
                   ?></p>
                   <br>
                   <br>
