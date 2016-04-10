@@ -81,22 +81,18 @@ $check = userExists($Login, $Password, $users); //Assigning the variable to chec
     {
         if($check) { //If the login is in the database.
             if($check['password'] == $Password){ //if User login succesfully.
-                $message = "<h1>" . "Hello, " . $check['full_name'] . "</h1><br>";
-                //echo("<h1>" . "Hello, " . $check['full_name'] . "</h1><br>"); // <<< Sucess!!!
+                $message = "<h1>Hello, " . $check['full_name'] . "</h1><br>";
                 $show = '';
             } else { //User is ok but wrong password.
-                $message = "Hello, there! = wrong password.";
-                //echo("Hello, there! = wrong password.");
+                $message = "<p>Hello, there!<br>(valid user but wrong password!)</p>";
                 $show = True;
             }
         } else { //If the user isn't in the database.
-            $message = "Hello, there! = User not found";
-            //echo("Hello, there! = User not found");
+            $message = "Hello, there!<br>(User not found)";
             $show = True;
         }
     } else { //If user don't tried to login.
-        $message = "Hello, there! = Don't trying to login";
-        //echo("Hello, there! = Don't trying to login");
+        $message = "<p>Hello, there!<br>(No login information)</p>";
         $show = '';
     }
     ?>
@@ -106,15 +102,15 @@ $check = userExists($Login, $Password, $users); //Assigning the variable to chec
         <article id="article">
             <div class="seeMore" style="display:
             <?php 
-                         if( $show ) {
+                         if( $show ) { // It's going to show "Invalid Credentials" if needed.
                              echo("block;");
                          } else {
-                             echo("none;");
+                             echo("none;"); //Otherwise will be hidden.
                          }
                      ?>">Invalid credentials</div>
-             <p><?php
+             <div><?php
                  echo($message);
-             ?></p>
+             ?></div>
              <br>
               <p><?php /*
                     if(isset ($_POST['login']))
