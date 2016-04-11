@@ -29,7 +29,7 @@ $home = "index";
 $mystatuses = "#";
 $allusers = "allusers";
 $maps = "maps.html";
-$about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness.html";
+$about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness";
 ?>
  <!-- ============================================== -->
  
