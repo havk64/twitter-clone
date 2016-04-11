@@ -32,11 +32,11 @@ else { //If user don't tried to login.
 }
 
 // Setting variables for navbar.
-$home = "index";
+$home = "index.php";
 $mystatuses = "#";
-$allusers = "allusers";
-$maps = "maps.html";
-$about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness";
+$allusers = "allusers.php";
+$maps = "maps.php";
+$about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness.php";
 ?> 
  <!-- ============================================== -->
  

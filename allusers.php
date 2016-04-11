@@ -4,11 +4,11 @@ $cookie = hasCookie($_COOKIE['login'], $users); //Assigning the variable to chec
 if($cookie){
     $current_user = $cookie;
 }
-$home = "index";
-$mystatuses = "allusers";
-$allusers = "allusers";
+$home = "index.php";
+$mystatuses = "allusers.php";
+$allusers = "allusers.php";
 $maps = "maps.html";
-$about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness.html";
+$about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">

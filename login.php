@@ -6,9 +6,9 @@ if($cookie){
 }
 $Home = "index.php";
 $MyStatuses = "#";
-$AllUsers = "allusers.html";
-$maps = "maps.html";
-$about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness.html";
+$AllUsers = "allusers.php";
+$maps = "maps.php";
+$about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
