@@ -12,9 +12,9 @@
       }
         return $ret; //Returning the variable.
   }
-function hasCookie( $login )
+function hasCookie( $login, $users )
 {
-    if(isset ($login)) {
+//    if(isset ($login)) {
         $ret = '';
         foreach ($users as $user) {
             if($login == $user['login']){
@@ -22,7 +22,7 @@ function hasCookie( $login )
             }
         }
         return $ret;
-    }
+  //  }
 }
 
 ?> <!-- / End of function -->
@@ -32,7 +32,7 @@ function hasCookie( $login )
 $Login = $_POST['login']; //Assigning a shorter variable to Post login params.
 $Password = $_POST['password']; //The same for Post password params.
 $check = userExists($Login, $Password, $users); //Assigning the variable to check authentication.
-$cookie = hasCookie($_COOKIE['LOGIN']);
+$cookie = hasCookie($_COOKIE['login'], $users);
 ?>
  <!-- ============================================== -->
  
@@ -53,9 +53,9 @@ if(isset ($Login)) //If the user tried to login.
         $message = "Hello, there!<br>(User not found)";
         $show = True;
     }
-} else if($cookie) {
+} elseif($cookie) {
     $current_user = $cookie;
-    $message = "<h1>Hello, " . $check['full_name'] . "</h1><br>(Has Cookie!)";
+    $message = "<h1>Hello, " . $cookie['full_name'] . "</h1><br>(Has Cookie!)";
 }
 else { //If user don't tried to login.
     $message = "<p>Hello, there!<br>(No login information - no cookie too.)</p>";
@@ -124,16 +124,16 @@ $about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness";
                       echo("Hello, there!");
                   }*/ 
                   ?></p>
-                  <p><?php echo($_COOKIE['login']) ?></p>
+                  <p><?php/* echo($_COOKIE['login'].' '. $cookie['login']. $_COOKIE) ?></p>
                   <br>
                   <p>  
                        <?php
-                       if(!isset($_COOKIE['login'])) {
+                       if(!isset($_COOKIE['login'])) { // Checking for cookies for debugging purposes. <<<=
                            echo "Cookie named '" . $_COOKIE['login'] . "' is not set!";
                        } else {
                            echo "Cookie '" . $_COOKIE['login'] . "' is set!<br>";
                            echo "Value is: " . $_COOKIE['login'];
-                       }
+                       }*/
                        ?>
                   </p>
                   <br>
