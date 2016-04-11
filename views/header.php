@@ -7,7 +7,7 @@
 
         <ul class="top-menu">
             <li><a href="#">Edit my profile</a></li>
-            <li><a href="#">Logout</a></li>
+            <li><a href="/logout.php">Logout</a></li>
         </ul>
 
        <!-- <div class="clearfix"></div> replacing for use flexbox -->
