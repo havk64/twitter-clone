@@ -81,7 +81,7 @@ if(isset ($Login)) //If the user tried to login.
 <body>
 <!--Begin main container-->
 <div class="container">
-<?php include("views/header.php"); ?>   <!-- Replacing the header.php with its Php partial -->
+<?php include("views/header.php"); ?>   <!-- Replacing the header with its Php partial -->
 
     <main>
 
@@ -298,11 +298,11 @@ if(isset ($Login)) //If the user tried to login.
                        <div id="template"></div>
                        
         </article>
-        <?php include("views/aside.php");?> <!-- Replacing the aside.php with its Php partial -->
+        <?php include("views/aside.php");?> <!-- Replacing the aside with its Php partial -->
 
     </main>
     
-    <?php include("views/footer.php") ?> <!-- Replacing the footer.php with its Php partial -->
+    <?php include("views/footer.php") ?> <!-- Replacing the footer with its Php partial -->
     
 </div>    <!--End main container-->
 <div id="bottom-right">Attention! This page is in development</div>
