@@ -4,9 +4,9 @@ $cookie = hasCookie($_COOKIE['login'], $users);
 if($cookie){
     $current_user = $cookie;
 }
-$Home = "index.php";
-$MyStatuses = "#";
-$AllUsers = "allusers.php";
+$home = "index.php";
+$mystatuses = "#";
+$allusers = "allusers.php";
 $maps = "maps.php";
 $about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness.php";
 ?>
