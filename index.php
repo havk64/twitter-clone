@@ -1,19 +1,7 @@
   <?php //Defining the function to check the user information.
 
     include_once "models/user.php"; //Including information about registered users.
-
-    function userExists($login, $password, $users) 
-  { // Function to check if the user is in the database.
-      $ret = '';
-      foreach ($users as $user)  {
-          if($login == $user['login']){ //If user is in the data base. Return it outside of the loop.
-            $ret = $user; //Can't return inside of loop. Assigning to a variable to return it later.
-          }
-      }
-        return $ret; //Returning the variable.
-  }
-?> <!-- / End of function -->
- <!-- ============================================== -->
+?>
  
 <?php //Assigning some variables
 $Login = $_POST['login']; //Assigning a shorter variable to Post login params.
@@ -31,7 +19,7 @@ if(isset ($Login)) //If the user tried to login.
         if($check['password'] == $Password){ //if User login succesfully.
             setcookie("login", $_POST['login']);
             $current_user = $check;
-            $message = "<h1>Hello, " . $check['full_name'] . "</h1><br>";
+            $message = "<h1>Hello, " . $current_user['full_name'] . "</h1><br>";
         } else { //User is ok but wrong password.
             $message = "<p>Hello, there!<br>(valid user but wrong password!)</p>";
             $show = True;
@@ -42,7 +30,7 @@ if(isset ($Login)) //If the user tried to login.
     }
 } elseif($cookie) {
     $current_user = $cookie;
-    $message = "<h1>Hello, " . $cookie['full_name'] . "</h1><br>(Has Cookie!)";
+    $message = "<h1>Hello, " . $current_user['full_name'] . "</h1><br>(Has Cookie!)";
 }
 else { //If user don't tried to login.
     $message = "<p>Hello, there!<br>(No login information - no cookie too.)</p>";
@@ -114,7 +102,8 @@ $about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness";
                   <p><?php/* echo($_COOKIE['login'].' '. $cookie['login']. $_COOKIE)*/ ?></p>
                   <br>
                   <p>  
-                       <?php /*
+                       <?php 
+                      echo("Current user is: ". $current_user['full_name']);/*
                        if(!isset($_COOKIE['login'])) { // Checking for cookies for debugging purposes. <<<=
                            echo "Cookie named '" . $_COOKIE['login'] . "' is not set!";
                        } else {
