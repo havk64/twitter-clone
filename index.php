@@ -137,12 +137,12 @@ $about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness.php";
                     ?>
                    <section> <!-- Section of PHP Content -->
                    <h1><?php echo( $name );?></h1>
-                   <img src="<? echo($img);?>"alt="<?echo($name);?>">
+                   <img src="<? echo($img);?>"alt="<? echo($name);?>">
                    <p>in 02/05/2016</p>
-                   <p><?echo($stat);?></p>
+                   <p><? echo($stat);?></p>
                    <div class="clearfix"></div>
-                   <a data-index="<?echo($id);?>" class="replyLink">Reply</a>
-                   <form id="<?echo($id);?>" action="POST" method="post" class="reply">
+                   <a data-index="<? echo($id);?>" class="replyLink">Reply</a>
+                   <form id="<? echo($id);?>" action="POST" method="post" class="reply">
                        <fieldset>
                        <textarea name="input">   
                        </textarea>
@@ -157,7 +157,7 @@ $about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness.php";
                     
                 </div>
             <!-- End of Statuses -->
-                      <?echo("Beginning of JSON content");?>
+                      <? echo("Beginning of JSON content");?>
                       
                        <div id="extrastatuses"></div>
                        <div id="template"></div>
