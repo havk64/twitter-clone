@@ -1,4 +1,9 @@
 <?php
+include_once "models/user.php"; //Including information about registered users.
+$cookie = hasCookie($_COOKIE['login'], $users);
+if($cookie){
+    $current_user = $cookie;
+}
 $Home = "index.php";
 $MyStatuses = "#";
 $AllUsers = "allusers.html";
@@ -22,6 +27,13 @@ $about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness.html";
 
     <main>
         <article>
+           <div><h1>
+                   <?php
+                   if($current_user){
+                       echo("You are currently logged in as: " . $current_user['full_name']);
+                   }
+                   ?></h1>
+           </div>
             <section id="login">
                <!-- <label for="status"></label> <= In case we can use label for the form... --> 
                 <form id="status" action="/index.php" method="POST" title="post">

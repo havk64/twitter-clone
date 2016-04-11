@@ -6,7 +6,7 @@ include_once "models/user.php"; //Including information about registered users.
 $Login = $_POST['login']; //Assigning a shorter variable to Post login params.
 $Password = $_POST['password']; //The same for Post password params.
 $check = userExists($Login, $Password, $users); //Assigning the variable to check authentication.
-$cookie = hasCookie($_COOKIE['login'], $users);
+$cookie = hasCookie($_COOKIE['login'], $users); //Assigning the variable to check if has cookie.
 ?>
  <!-- ============================================== -->
  

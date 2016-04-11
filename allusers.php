@@ -1,5 +1,9 @@
 <?php
 include_once "models/user.php"; //Including information about registered users.
+$cookie = hasCookie($_COOKIE['login'], $users); //Assigning the variable to check if has cookie.
+if($cookie){
+    $current_user = $cookie;
+}
 $home = "index";
 $mystatuses = "allusers";
 $allusers = "allusers";
@@ -21,6 +25,13 @@ $about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness.html";
 <?php include("views/header.php"); ?>   <!-- Replacing the header with its Php partial -->
 
     <main>
+                  <div><h1>
+                   <?php
+                   if($current_user){
+                       echo("You are currently logged in as: " . $current_user['full_name']);
+                   }
+                   ?></h1>
+           </div>
         <article>
             <h2>About Us</h2>
             <p>
