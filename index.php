@@ -1,3 +1,55 @@
+  <?php //Defining the function to check the user information.
+
+    include_once "models/user.php"; //Including information about registered users.
+
+    function userExists($login, $password, $users) 
+  { // Function to check if the user is in the database.
+      $ret = '';
+      foreach ($users as $user)  {
+          if($login == $user['login']){ //If user is in the data base. Return it outside of the loop.
+            $ret = $user; //Can't return inside of loop. Assigning to a variable to return it later.
+        }
+    }
+      return $ret; //Returning the variable.
+  }
+?> <!-- / End of function -->
+ <!-- ============================================== -->
+ 
+<?php //Assigning some variables
+$Login = $_POST['login']; //Assigning a shorter variable to Post login params.
+$Password = $_POST['password']; //The same for Post password params.
+$check = userExists($Login, $Password, $users); //Assigning the variable to check authentication.
+$home = "index";
+$mystatuses = "#";
+$allusers = "allusers";
+$maps = "maps.html";
+$about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness";
+?>
+ <!-- ============================================== -->
+ 
+<?php //Control flow for authentication.
+$show = '';    
+if(isset ($Login)) //If the user tried to login.
+{
+    if($check) { //If the login is in the database.
+        if($check['password'] == $Password){ //if User login succesfully.
+            $message = "<h1>Hello, " . $check['full_name'] . "</h1><br>";
+            $show = '';
+        } else { //User is ok but wrong password.
+            $message = "<p>Hello, there!<br>(valid user but wrong password!)</p>";
+            $show = True;
+        }
+    } else { //If the user isn't in the database.
+        $message = "Hello, there!<br>(User not found)";
+        $show = True;
+    }
+} else { //If user don't tried to login.
+    $message = "<p>Hello, there!<br>(No login information)</p>";
+    $show = '';
+}
+?> 
+ <!-- ============================================== -->
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,40 +75,25 @@
 <body>
 <!--Begin main container-->
 <div class="container">
-    <!--Begin header container-->
-    <header id="header">
-        <div class="logo">
-            <img src="img/logo.png" alt="Logo"/>
-            <p>Likable Stats</p>
-        </div>
-
-        <ul class="top-menu">
-            <li><a href="#">Edit my profile</a></li>
-            <li><a href="#">Logout</a></li>
-        </ul>
-
-       <!-- <div class="clearfix"></div> replacing for use flexbox -->
-
-        <div class="outer-menu-container">
-            <ul class="main-menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">My statuses</a></li>
-                <li><a href="allusers.html">All users</a></li>
-                <li><a href="maps.html">Maps</a></li>
-                <li><a href="Impossible-Octopus-Fitness/Impossible-Octopus-Fitness.html">About</a></li>
-            </ul>
-        </div>
-        <button id="all-images" type="submit" value="Send">All images on this pages</button>
-        
-        
-
-    </header>   <!--End header container-->
+<?php include("views/header.php"); ?>   <!-- Replacing the header with its Php partial -->
 
     <main>
 
         <article id="article">
-              <p><?php 
-                    if(isset ($_POST['submit']))
+            <div class="seeMore" style="display:
+            <?php 
+                         if( $show ) { // It's going to show "Invalid Credentials" if needed.
+                             echo("block;");
+                         } else {
+                             echo("none;"); //Otherwise will be hidden.
+                         }
+                     ?>">Invalid credentials</div>
+             <div><?php
+                 echo($message);
+             ?></div>
+             <br>
+              <p><?php /* ===>>> Code of previous task(4). Left for grade purposes. <<<==
+                    if(isset ($_POST['login'])) 
                   {
                       	echo("<h1>" . "Hello, " . $_POST['login'] . "</h1>");
                         echo( "Your rot13'd login is: " . str_rot13($_POST['login']). '<br>');
@@ -64,9 +101,8 @@
                   } 
                   else { 
                       echo("Hello, there!");
-                  }
+                  }*/ 
                   ?></p>
-                  <br>
                   <br>
                   
            <a id="show-hide">Post a status</a>
@@ -256,44 +292,12 @@
                        <div id="template"></div>
                        
         </article>
-        <aside>
-              <p id="pweather">It's <span id="weather">an unknown weather</span> today!</p>
-              <button id="upweather" type="button">Update the Weather</button>
-            <section>
-                <h2 class="title">Dennis Ritchie</h2>
-                <img src="img/ritchie.jpg" alt="Dennis Ritchie">
-                <p>Father of C language and Unix Operating System - </p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo harum dolorem quasi, officia earum velit libero fuga culpa quaerat sit in nam assumenda impedit tenetur sapiente suscipit architecto nostrum possimus.</p>
-            </section>
+        <?php include("views/aside.php");?> <!-- Replacing the aside with its Php partial -->
 
-            <div class="clearfix"></div>
-
-            <section>
-                <h2 class="title">Alexandro de Oliveira</h2>
-                <img src="img/Alexandro%20de%20Oliveira.jpg" alt="Alexandro de Oliveira">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore fugiat officia quam quis vero, ipsum reiciendis et debitis a harum. Nemo distinctio beatae quis delectus autem obcaecati vero hic dolore!</p>
-            </section>
-            
-        </aside>
     </main>
-    <div class="clearfix"></div>
-    <footer id="footer">
-        <div class="footer-left">
-                     
-               <ul class="footer-menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">My statuses</a></li>
-                <li><a href="allusers.html">All users</a></li>
-                <li><a href="maps.html">Maps</a></li>
-                <li><a href="Impossible-Octopus-Fitness/Impossible-Octopus-Fitness.html">About</a></li>
-            </ul>
-        </div>
-        <div class="footer-center"><p>Made for a Holberton School Project, by Alexandro de Oliveira</p></div>
-        <div class="footer-right">
-            <a href="https://github.com/havk64"><img src="img/octopus-github.png" height="20px" alt="Github" /></a>
-            <a href="https://twitter.com/havk64"><img src="img/twitter.png" height="20px" alt="Github" /></a>
-            <a href="https://www.linkedin.com/in/alexandroliveira"><img src="img/linkedin.png" height="25px" alt="Github" /></a>
-        </div>
-    </footer> 
+    
+    <?php include("views/footer.php") ?> <!-- Replacing the footer with its Php partial -->
+    
 </div>    <!--End main container-->
 <div id="bottom-right">Attention! This page is in development</div>
 </body>
