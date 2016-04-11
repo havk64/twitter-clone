@@ -1,13 +1,12 @@
-  <?php //Defining the function to check the user information.
-
-    include_once "models/user.php"; //Including information about registered users.
+<?php 
+include_once "models/user.php"; //Including information about registered users.
 ?>
  
 <?php //Assigning some variables
 $Login = $_POST['login']; //Assigning a shorter variable to Post login params.
 $Password = $_POST['password']; //The same for Post password params.
 $check = userExists($Login, $Password, $users); //Assigning the variable to check authentication.
-$cookie = userExists($_COOKIE['login'],$show, $users);
+$cookie = hasCookie($_COOKIE['login'], $users);
 ?>
  <!-- ============================================== -->
  
@@ -15,17 +14,12 @@ $cookie = userExists($_COOKIE['login'],$show, $users);
 $show = '';    
 if(isset ($Login)) //If the user tried to login.
 {
-    if($check) { //If the login is in the database.
-        if($check['password'] == $Password){ //if User login succesfully.
+    if($check) { //If the login was made successfully.
             setcookie("login", $_POST['login']);
             $current_user = $check;
             $message = "<h1>Hello, " . $current_user['full_name'] . "</h1><br>";
-        } else { //User is ok but wrong password.
-            $message = "<p>Hello, there!<br>(valid user but wrong password!)</p>";
-            $show = True;
-        }
     } else { //If the user isn't in the database.
-        $message = "Hello, there!<br>(User not found)";
+        $message = "Hello, there!<br>(User not found or wrong credentials)";
         $show = True;
     }
 } elseif($cookie) {

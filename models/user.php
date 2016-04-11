@@ -6,16 +6,26 @@ $users = [
   ];
 ?> <!-- / End of Array. -->
  <!-- ============================================== -->
-<?php
-    function userExists($login, $password, $users) 
+<?php //Defining the function to check the user information.
+function userExists($login, $password, $users) 
   { // Function to check if the user is in the database.
       $ret = '';
       foreach ($users as $user)  {
-          if($login == $user['login']){ //If user is in the data base. Return it outside of the loop.
+          if($login == $user['login'] && $password == $user['password']){ //If user login succesfull. Return it outside of the loop.
             $ret = $user; //Can't return inside of loop. Assigning to a variable to return it later.
           }
       }
         return $ret; //Returning the variable.
   }
+function hasCookie($login, $users)
+{
+    $ret = '';
+    foreach ($users as $user) {
+        if ($login == $user['login']){
+            $ret = $user;
+        }
+    }
+    return $ret;
+}
 ?> <!-- / End of function -->
  <!-- ============================================== -->
