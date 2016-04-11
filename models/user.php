@@ -1,8 +1,10 @@
 <?php //Array of registered users.
 $users = [
-    array("id" => 1, "login" => "user1", "password" => "password1", "full_name" => "User 1"),
-    array("id" => 2, "login" => "user2", "password" => "password2", "full_name" => "User 2"),
-    array("id" => 3, "login" => "user3", "password" => "password3", "full_name" => "User 3"),
+    array("id" => 1, "login" => "alex", "password" => "password1", "full_name" => "Alexandro de Oliveira"),
+    array("id" => 2, "login" => "thompson", "password" => "password2", "full_name" => "Ken Thompson"),
+    array("id" => 3, "login" => "ritchie", "password" => "password3", "full_name" => "Dennis Ritchie"),
+    array("id" => 4, "login" => "resig", "password" => "password4", "full_name" => "John Resig"),
+    array("id" => 5, "login" => "brian", "password" => "password5", "full_name" => "Brian Fox"),
   ];
 ?> <!-- / End of Array. -->
  <!-- ============================================== -->
