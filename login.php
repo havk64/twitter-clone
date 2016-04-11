@@ -18,7 +18,7 @@ $about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness.html";
 <body>
 <!--Begin main container-->
 <div class="container">
-<?php include("views/header.php"); ?>
+<?php include("views/header.php"); ?> <!-- Including header.php -->
 
     <main>
         <article>
@@ -36,12 +36,12 @@ $about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness.html";
             </section>
         </article>
         
-        <?php include("views/aside.php");?> 
+        <?php include("views/aside.php");?> <!-- Including the aside.php -->
         
     </main>
     <div class="clearfix"></div>
     
-    <?php include("views/footer.php") ?>
+    <?php include("views/footer.php") ?> <!-- Including footer.php -->
     
 </div>    <!--End main container-->
 <div id="bottom-right">Be aware! This page is still in beta</div>
