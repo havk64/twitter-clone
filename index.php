@@ -12,19 +12,6 @@
       }
         return $ret; //Returning the variable.
   }
-function hasCookie( $login, $users )
-{
-//    if(isset ($login)) {
-        $ret = '';
-        foreach ($users as $user) {
-            if($login == $user['login']){
-                $ret = $user;
-            }
-        }
-        return $ret;
-  //  }
-}
-
 ?> <!-- / End of function -->
  <!-- ============================================== -->
  
@@ -32,7 +19,7 @@ function hasCookie( $login, $users )
 $Login = $_POST['login']; //Assigning a shorter variable to Post login params.
 $Password = $_POST['password']; //The same for Post password params.
 $check = userExists($Login, $Password, $users); //Assigning the variable to check authentication.
-$cookie = hasCookie($_COOKIE['login'], $users);
+$cookie = userExists($_COOKIE['login'],$show, $users);
 ?>
  <!-- ============================================== -->
  
