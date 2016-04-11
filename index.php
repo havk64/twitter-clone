@@ -8,10 +8,23 @@
       foreach ($users as $user)  {
           if($login == $user['login']){ //If user is in the data base. Return it outside of the loop.
             $ret = $user; //Can't return inside of loop. Assigning to a variable to return it later.
-        }
-    }
-      return $ret; //Returning the variable.
+          }
+      }
+        return $ret; //Returning the variable.
   }
+function hasCookie( $login )
+{
+    if(isset ($login)) {
+        $ret = '';
+        foreach ($users as $user) {
+            if($login == $user['login']){
+                $ret = $user;
+            }
+        }
+        return $ret;
+    }
+}
+
 ?> <!-- / End of function -->
  <!-- ============================================== -->
  
@@ -19,6 +32,7 @@
 $Login = $_POST['login']; //Assigning a shorter variable to Post login params.
 $Password = $_POST['password']; //The same for Post password params.
 $check = userExists($Login, $Password, $users); //Assigning the variable to check authentication.
+$cookie = hasCookie($_COOKIE['LOGIN']);
 ?>
  <!-- ============================================== -->
  
@@ -28,12 +42,9 @@ if(isset ($Login)) //If the user tried to login.
 {
     if($check) { //If the login is in the database.
         if($check['password'] == $Password){ //if User login succesfully.
-            //ob_start();
             setcookie("login", $_POST['login']);
             $current_user = $check;
-            //ob_end_flush();
             $message = "<h1>Hello, " . $check['full_name'] . "</h1><br>";
-            $show = '';
         } else { //User is ok but wrong password.
             $message = "<p>Hello, there!<br>(valid user but wrong password!)</p>";
             $show = True;
@@ -42,8 +53,12 @@ if(isset ($Login)) //If the user tried to login.
         $message = "Hello, there!<br>(User not found)";
         $show = True;
     }
-} else { //If user don't tried to login.
-    $message = "<p>Hello, there!<br>(No login information)</p>";
+} else if($cookie) {
+    $current_user = $cookie;
+    $message = "<h1>Hello, " . $check['full_name'] . "</h1><br>(Has Cookie!)";
+}
+else { //If user don't tried to login.
+    $message = "<p>Hello, there!<br>(No login information - no cookie too.)</p>";
     $show = '';
 }
 
