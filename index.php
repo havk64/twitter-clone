@@ -124,10 +124,10 @@ $about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness";
                       echo("Hello, there!");
                   }*/ 
                   ?></p>
-                  <p><?php/* echo($_COOKIE['login'].' '. $cookie['login']. $_COOKIE) ?></p>
+                  <p><?php/* echo($_COOKIE['login'].' '. $cookie['login']. $_COOKIE)*/ ?></p>
                   <br>
                   <p>  
-                       <?php
+                       <?php /*
                        if(!isset($_COOKIE['login'])) { // Checking for cookies for debugging purposes. <<<=
                            echo "Cookie named '" . $_COOKIE['login'] . "' is not set!";
                        } else {
