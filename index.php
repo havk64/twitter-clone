@@ -19,11 +19,6 @@
 $Login = $_POST['login']; //Assigning a shorter variable to Post login params.
 $Password = $_POST['password']; //The same for Post password params.
 $check = userExists($Login, $Password, $users); //Assigning the variable to check authentication.
-$home = "index";
-$mystatuses = "#";
-$allusers = "allusers";
-$maps = "maps.html";
-$about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness";
 ?>
  <!-- ============================================== -->
  
@@ -33,6 +28,10 @@ if(isset ($Login)) //If the user tried to login.
 {
     if($check) { //If the login is in the database.
         if($check['password'] == $Password){ //if User login succesfully.
+            //ob_start();
+            setcookie("login", $_POST['login']);
+            $current_user = $check;
+            //ob_end_flush();
             $message = "<h1>Hello, " . $check['full_name'] . "</h1><br>";
             $show = '';
         } else { //User is ok but wrong password.
@@ -47,6 +46,13 @@ if(isset ($Login)) //If the user tried to login.
     $message = "<p>Hello, there!<br>(No login information)</p>";
     $show = '';
 }
+
+// Setting variables for navbar.
+$home = "index";
+$mystatuses = "#";
+$allusers = "allusers";
+$maps = "maps.html";
+$about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness";
 ?> 
  <!-- ============================================== -->
  
@@ -103,6 +109,18 @@ if(isset ($Login)) //If the user tried to login.
                       echo("Hello, there!");
                   }*/ 
                   ?></p>
+                  <p><?php echo($_COOKIE['login']) ?></p>
+                  <br>
+                  <p>  
+                       <?php
+                       if(!isset($_COOKIE['login'])) {
+                           echo "Cookie named '" . $_COOKIE['login'] . "' is not set!";
+                       } else {
+                           echo "Cookie '" . $login . "' is set!<br>";
+                           echo "Value is: " . $_COOKIE[$login];
+                       }
+                       ?>
+                  </p>
                   <br>
                   
            <a id="show-hide">Post a status</a>
