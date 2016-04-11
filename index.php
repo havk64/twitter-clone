@@ -116,8 +116,8 @@ $about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness";
                        if(!isset($_COOKIE['login'])) {
                            echo "Cookie named '" . $_COOKIE['login'] . "' is not set!";
                        } else {
-                           echo "Cookie '" . $login . "' is set!<br>";
-                           echo "Value is: " . $_COOKIE[$login];
+                           echo "Cookie '" . $_COOKIE['login'] . "' is set!<br>";
+                           echo "Value is: " . $_COOKIE['login'];
                        }
                        ?>
                   </p>
