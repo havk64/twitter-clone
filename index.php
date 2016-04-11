@@ -1,5 +1,6 @@
 <?php 
 include_once "models/user.php"; //Including information about registered users.
+include_once "models/status.php"; //Including information about registered users.
 ?>
  
 <?php //Assigning some variables
@@ -97,7 +98,8 @@ $about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness.php";
                   <br>
                   <p>  
                        <?php 
-                      echo("Current user is: ". $current_user['full_name']);/*
+                      $id = (isset ($current_user)) ? $current_user['full_name'] : 'undefined';
+                      echo("Current user is: ". $id );/*
                        if(!isset($_COOKIE['login'])) { // Checking for cookies for debugging purposes. <<<=
                            echo "Cookie named '" . $_COOKIE['login'] . "' is not set!";
                        } else {
@@ -122,174 +124,40 @@ $about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness.php";
             </section>
             <!-- >>> Old location of first statuses <<< -->
             <!-- >>> ...substituted by Handlebars template <<< -->
-            <!-- >>> Old location of first statuses <<< -->          
-                <div class="hidden">
-                    <section>		             
-                     <h1>Alexandro de Oliveira</h1>		
-                     <img src="img/Alexandro%20de%20Oliveira.jpg" alt="Alexandro de Oliveira">		
-                             
-                     <p>in 02/05/2016</p>		
-                     <p>		
-                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis quaerat ullam nihil inventore sint. Quae laudantium animi, odio adipisci placeat, delectus, at vitae eveniet voluptates et iure facere nulla, voluptatum?		
-                     </p>		
-                     <div class="clearfix"></div>		
-                             <a data-index="1" class="replyLink" href="#/">Reply</a>		
-                     <form id="1" action="POST" method="post" class="reply">		
-                         <fieldset>		
-                            <textarea name="input"></textarea>		
-                             <label><input name="checkbox" type="checkbox">include location</label>		
-                             <button type="submit" value="SEND">Post</button>		
-                         </fieldset> 		
-                     </form>		
-                                 </section>		
-                                 <section>		
-                     <h1>Ken Thompson</h1> <!-- Put your photo here -->		
-                     <img src="img/ken-thompson.jpg" alt="Ken Thompson">		
-                     <p>in 02/05/2016</p>		
-                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero suscipit qui necessitatibus ad fugit voluptatum assumenda vel iusto, adipisci quam! Explicabo totam officia blanditiis. Reprehenderit animi dolorem odit hic voluptatibus.</p>		
-                     <div class="clearfix"></div>		
-                             <a data-index="2" class="replyLink" href="#/">Reply</a>		
-                     <form id="2" action="POST" method="post" class="reply">		
-                         <fieldset>		
-                            <textarea name="input"></textarea>		
-                             <label><input name="checkbox" type="checkbox">include location</label>		
-                             <button type="submit" value="SEND">Post</button>		
-                         </fieldset> 		
-                     </form>		
-                                 </section>		
-                             <section>		
-                     <h1>Dennis Ritchie</h1> <!-- Put your photo here -->		
-                     <img src="img/ritchie.jpg" alt="Dennis Ritchie">		
-                     <p>in 02/05/2016</p>		
-                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero suscipit qui necessitatibus ad fugit voluptatum assumenda vel iusto, adipisci quam! Explicabo totam officia blanditiis. Reprehenderit animi dolorem odit hic voluptatibus.</p>		
-                     <div class="clearfix"></div>		
-                             <a data-index="3" class="replyLink" href="#/">Reply</a>		
-                     <form id="3" action="POST" method="post" class="reply">		
-                         <fieldset>		
-                            <textarea name="input"></textarea>		
-                             <label><input name="checkbox" type="checkbox">include location</label>		
-                             <button type="submit" value="SEND">Post</button>		
-                         </fieldset> 		
-                     </form>		
-                                 </section>		
-                                 <section>		
-                     <h1>John Cochran</h1>		
-                     <img src="img/tiwAAnkn.jpg" alt="John Cochran">		
-                                
-                     <p>in 02/05/2016</p>		
-                     <p>		
-                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis quaerat ullam nihil inventore sint. Quae laudantium animi, odio adipisci placeat, delectus, at vitae eveniet voluptates et iure facere nulla, voluptatum?		
-                     </p>		
-                     <div class="clearfix"></div>		
-                         <a data-index="4" class="replyLink" href="#/">Reply</a>		
-                     <form id="4" action="POST" method="post" class="reply">		
-                         <fieldset>		
-                            <textarea name="input"></textarea>		
-                             <label><input name="checkbox" type="checkbox">include location</label>		
-                             <button type="submit" value="SEND">Post</button>		
-                         </fieldset> 		
-                     </form>		
-                                 </section>		
-                                 <section>		
-                     <h1>John Resig</h1>		
-                     <img src="img/John%20Resig.jpg" alt="John Resig">		
-                     <p>in 02/05/2016</p>		
-                             
-                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero suscipit qui necessitatibus ad fugit voluptatum assumenda vel iusto, adipisci quam! Explicabo totam officia blanditiis. Reprehenderit animi dolorem odit hic voluptatibus.</p>		
-                     <div class="clearfix"></div>		
-                                 <a data-index="5" class="replyLink" href="#/">Reply</a>		
-                     <form id="5" action="POST" method="post" class="reply">		
-                         <fieldset>		
-                            <textarea name="input"></textarea>		
-                             <label><input name="checkbox" type="checkbox">include location</label>		
-                             <button type="submit" value="SEND">Post</button>		
-                         </fieldset> 		
-                     </form>		
-                                 </section>		
-                             <section>		
-                     <h1>Alexandro de Oliveira</h1>		
-                     <img src="img/Alexandro%20de%20Oliveira.jpg" alt="Alexandro de Oliveira">		
-                             
-                     <p>in 02/05/2016</p>		
-                     <p>		
-                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis quaerat ullam nihil inventore sint. Quae laudantium animi, odio adipisci placeat, delectus, at vitae eveniet voluptates et iure facere nulla, voluptatum?		
-                     </p>		
-                     <div class="clearfix"></div>		
-                             <a data-index="6" class="replyLink" href="#/">Reply</a>		
-                     <form id="6" action="POST" method="post" class="reply">		
-                         <fieldset>		
-                            <textarea name="input"></textarea>		
-                             <label><input name="checkbox" type="checkbox">include location</label>		
-                             <button type="submit" value="SEND">Post</button>		
-                         </fieldset> 		
-                     </form>		
-                                 </section>		
-                                 <section>		
-                     <h1>Ken Thompson</h1> <!-- Put your photo here -->		
-                     <img src="img/ken-thompson.jpg" alt="Ken Thompson">		
-                     <p>in 02/05/2016</p>		
-                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero suscipit qui necessitatibus ad fugit voluptatum assumenda vel iusto, adipisci quam! Explicabo totam officia blanditiis. Reprehenderit animi dolorem odit hic voluptatibus.</p>		
-                     <div class="clearfix"></div>		
-                             <a data-index="7" class="replyLink" href="#/">Reply</a>		
-                     <form id="7" action="POST" method="post" class="reply">		
-                         <fieldset>		
-                            <textarea name="input"></textarea>		
-                             <label><input name="checkbox" type="checkbox">include location</label>		
-                             <button type="submit" value="SEND">Post</button>		
-                         </fieldset> 		
-                     </form>		
-                                 </section>		
-                             <section>		
-                     <h1>Dennis Ritchie</h1> <!-- Put your photo here -->		
-                     <img src="img/ritchie.jpg" alt="Dennis Ritchie">		
-                     <p>in 02/05/2016</p>		
-                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero suscipit qui necessitatibus ad fugit voluptatum assumenda vel iusto, adipisci quam! Explicabo totam officia blanditiis. Reprehenderit animi dolorem odit hic voluptatibus.</p>		
-                     <div class="clearfix"></div>		
-                             <a data-index="8" class="replyLink" href="#/">Reply</a>		
-                     <form id="8" action="POST" method="post" class="reply">		
-                         <fieldset>		
-                            <textarea name="input"></textarea>		
-                             <label><input name="checkbox" type="checkbox">include location</label>		
-                             <button type="submit" value="SEND">Post</button>		
-                         </fieldset> 		
-                     </form>		
-                                 </section>		
-                                 <section>		
-                     <h1>John Cochran</h1>		
-                     <img src="img/tiwAAnkn.jpg" alt="John Cochran">		
-                             
-                     <p>in 02/05/2016</p>		
-                     <p>		
-                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis quaerat ullam nihil inventore sint. Quae laudantium animi, odio adipisci placeat, delectus, at vitae eveniet voluptates et iure facere nulla, voluptatum?		
-                     </p>		
-                     <div class="clearfix"></div>		
-                         <a data-index="9" class="replyLink" href="#/">Reply</a>		
-                     <form id="9" action="POST" method="post" class="reply">		
-                         <fieldset>		
-                            <textarea name="input"></textarea>		
-                             <label><input name="checkbox" type="checkbox">include location</label>		
-                             <button type="submit" value="SEND">Post</button>		
-                         </fieldset> 		
-                     </form>		
-                                 </section>		
-                                 <section>		
-                     <h1>John Resig</h1>		
-                     <img src="img/John%20Resig.jpg" alt="John Resig">		
-                     <p>in 02/05/2016</p>		
-                             
-                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero suscipit qui necessitatibus ad fugit voluptatum assumenda vel iusto, adipisci quam! Explicabo totam officia blanditiis. Reprehenderit animi dolorem odit hic voluptatibus.</p>		
-                     <div class="clearfix"></div>		
-                                 <a data-index="10" class="replyLink" href="#/">Reply</a>		
-                     <form id="10" action="POST" method="post" class="reply">		
-                         <fieldset>		
-                            <textarea name="input"></textarea>		
-                             <label><input name="checkbox" type="checkbox">include location</label>		
-                             <button type="submit" value="SEND">Post</button>		
-                         </fieldset> 		
-                     </form>		
-                                 </section>
+            <!-- >>> Old location of first statuses <<< --> 
+                
+                <div> <!-- Beginning of Php content -->
+               <?php foreach ($statuses as $status) { 
+    $user = $status['user_id'];
+    $userdata = getUser($user, $users);
+    $name = $userdata['full_name'];
+    $img = $userdata['img'];
+    $id = $status['id'];
+    $stat = $status['status'];
+                    ?>
+                   <section> <!-- Section of PHP Content -->
+                   <h1><?php echo( $name );?></h1>
+                   <img src="<? echo($img);?>"alt="<?echo($name);?>">
+                   <p>in 02/05/2016</p>
+                   <p><?echo($stat);?></p>
+                   <div class="clearfix"></div>
+                   <a data-index="<?echo($id);?>" class="replyLink">Reply</a>
+                   <form id="<?echo($id);?>" action="POST" method="post" class="reply">
+                       <fieldset>
+                       <textarea name="input">   
+                       </textarea>
+                       <label><input name="checkbox" type="checkbox">include location</label>
+                        <button type="submit" value="SEND">Post</button>
+                       </fieldset>
+                   </form>
+                   </section>        <!-- / End of Php template -->
+                   <? } ?>
+                   <? echo("End of Php content!");?>
+                    <!-- Replacing old statuses content with php template -->
+                    
                 </div>
-            <!-- End of Hidden html content -->
+            <!-- End of Statuses -->
+                      <?echo("Beginning of JSON content");?>
                       
                        <div id="extrastatuses"></div>
                        <div id="template"></div>
