@@ -18,6 +18,7 @@ $about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness.php";
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="style.css" type="text/css">
     <script src="js/sticky_smart_header.js"></script>
+    <script src="js/weather.js"></script>
 </head>
 <body>
 <!--Begin main container-->
@@ -50,18 +51,7 @@ $about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness.php";
             </li>
         </ul>
         </article>
-        <aside>
-            <section>
-                <h3 class="title">Dennis Ritchie</h3>
-                <img src="img/ritchie.jpg" alt="Denns Ritchie">
-                <p>Father of C language and Unix Operating System</p><p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo harum dolorem quasi, officia earum velit libero fuga culpa quaerat sit in nam assumenda impedit tenetur sapiente suscipit architecto nostrum possimus.</p>
-            </section>
-            <section>
-                <h3 class="title">Alexandro de Oliveira</h3>
-                <img src="img/Alexandro%20de%20Oliveira.jpg" alt="Alexandro de Oliveira">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore fugiat officia quam quis vero, ipsum reiciendis et debitis a harum. Nemo distinctio beatae quis delectus autem obcaecati vero hic dolore!</p>
-            </section>
-        </aside>
+        <?php include("views/aside.php");?> <!-- Replacing the aside with its Php partial -->
     </main>
     <div class="clearfix"></div>
     

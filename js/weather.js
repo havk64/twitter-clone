@@ -71,7 +71,7 @@ function callback(data){ // => Callback function used to wrap the result of requ
             break;
         case "dreary":
             console.log("Boring day?");
-            console.log("Let's building awesome CODE! >:-)");
+            console.log("Let's build awesome CODE! >:-)");
             pweather.style.backgroundColor = 'grey';
             break;
         case "misty":
