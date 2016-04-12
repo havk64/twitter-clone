@@ -51,7 +51,8 @@ function callback(data){ // => Callback function used to wrap the result of requ
             break;
         case "rainy":
             console.log("Don't forget the Umbrella!");
-            pweather.style.backgroundColor = "#d8d3d3";
+            pweather.style.color = "white";
+            pweather.style.background = 'url(img/rainy.jpg)';
             break;
         case "foggy":
             console.log("Can't see anything...");
