@@ -128,12 +128,12 @@ $about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness.php";
                 
                 <div> <!-- Beginning of Php content -->
                <?php foreach ($statuses as $status) { 
-                        $user = $status['user_id'];
-                        $userdata = getUser($user, $users);
-                        $name = $userdata['full_name'];
-                        $img = $userdata['img'];
-                        $id = $status['id'];
-                        $stat = $status['status'];
+                        $user = $status['user_id']; //Assigning variables to improve code readability.
+                        $userdata = getUser($user, $users); //Using function to get the user data.
+                        $name = $userdata['full_name']; //Full Name of user that post this status.
+                        $img = $userdata['img']; //Image of this same user.
+                        $id = $status['id']; // The id of actual status.
+                        $stat = $status['status']; // The actual status.
                     ?>
                    <section> <!-- Section of PHP Content -->
                    <h1><?php echo( $name );?></h1>
