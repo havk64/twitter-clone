@@ -40,4 +40,7 @@ function getUser($id, $users) {
     }
     return $ret;
 }
+function showHide($status){
+    return (isset($status)) ? array("hide" => "inline", "mystatuses"=>"/mystatuses.php") : array("hide" => "none", "mystatuses" => "");
+}
 ?>

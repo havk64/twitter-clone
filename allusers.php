@@ -5,7 +5,7 @@ if($cookie){
     $current_user = $cookie;
 }
 $home = "index.php";
-$mystatuses = "allusers.php";
+$showhide = showHide($current_user);
 $allusers = "allusers.php";
 $maps = "maps.html";
 $about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness.php";

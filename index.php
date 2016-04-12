@@ -24,7 +24,7 @@ if(isset ($Login)) //If the user tried to login.
     }
 } elseif($cookie) {
     $current_user = $cookie;
-    $message = "<h1>Hello, " . $current_user['full_name'] . "</h1><br>(Has Cookie!)";
+    $message = "<h1>Hello, " . $current_user['full_name'] . "</h1><br>( Cookie Found! )";
 }
 else { //If user don't tried to login.
     $message = "<p>Hello, there!<br>(No login information - no cookie either )</p>";
@@ -33,10 +33,10 @@ else { //If user don't tried to login.
 
 // Setting variables for navbar.
 $home = "index.php";
-$mystatuses = "#";
 $allusers = "allusers.php";
 $maps = "maps.php";
 $about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness.php";
+$showhide = showHide($current_user);
 ?> 
 <!DOCTYPE html>
 <html lang="en">
