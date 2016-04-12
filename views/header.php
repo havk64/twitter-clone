@@ -6,6 +6,7 @@
         </div>
 
         <ul class="top-menu">
+           <li><a href="/login.php">Login</a></li>
             <li><a href="#">Edit my profile</a></li>
             <li><a href="/logout.php">Logout</a></li>
         </ul>

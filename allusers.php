@@ -34,8 +34,31 @@ $about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness.php";
                    }
                    ?></h1>
            </div>
-        <article>
-            <h2>About Us</h2>
+           <article>
+            <?php foreach ($users as $user) { 
+                        $name = $user['full_name']; //Full Name of user that post this status.
+                        $img = $user['img']; //Image of this same user.
+                        $bio = $user['bio']; // The id of actual status.
+                        $id = $user['id']; // The actual status.
+                    ?>
+                   <section> <!-- Section of PHP Content -->
+                   <h1><?php echo( $name );?></h1>
+                   <img src="<?php echo($img);?>"alt="<?php echo($name);?>">
+                   <p>User id: <?php echo($id);?></p>
+                   <p><?php echo($bio);?></p>
+                   <div class="clearfix"></div>
+                   <!-- <a data-index="<?php echo($id);?>" class="replyLink">Reply</a>
+                   <form id="<?php echo($id);?>" action="POST" method="post" class="reply">
+                       <fieldset>
+                       <textarea name="input">   
+                       </textarea>
+                       <label><input name="checkbox" type="checkbox">include location</label>
+                        <button type="submit" value="SEND">Post</button>
+                       </fieldset>
+                   </form> -->
+                   </section>        <!-- / End of Php template -->
+                   <?php } ?>
+                               <h2>About Us</h2>
             <p>
                 Lovable Stats is an online stats agregator built to be loved by developers and everyday users. We guarantee no hassles and easily readable stats.
             </p>
@@ -51,7 +74,11 @@ $about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness.php";
                 Total Geek Stats
             </li>
         </ul>
-        </article>
+
+           </article>
+
+
+
         <?php include("views/aside.php");?> <!-- Replacing the aside with its Php partial -->
     </main>
     <div class="clearfix"></div>
