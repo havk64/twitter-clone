@@ -36,7 +36,7 @@ $home = "index.php";
 $allusers = "allusers.php";
 $maps = "maps.php";
 $about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness.php";
-$showhide = showHide($current_user);
+$logged = logged($current_user);
 ?> 
 <!DOCTYPE html>
 <html lang="en">

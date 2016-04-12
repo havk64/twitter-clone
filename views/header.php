@@ -7,7 +7,7 @@
 
         <ul class="top-menu">
            <li><a href="/login.php">Login</a></li>
-            <li><a href="#">Edit my profile</a></li>
+            <li><a href="<?php echo($logged['profile']);?>">Edit my profile</a></li>
             <li><a href="/logout.php">Logout</a></li>
         </ul>
 
@@ -16,7 +16,7 @@
         <div class="outer-menu-container">
             <ul class="main-menu">
                 <li><a href="<?php echo($home);?>">Home</a></li>
-                <li style="display:<?php echo($showhide['hide']);?>"><a href="<?php echo($showhide['mystatuses']);?>">My statuses</a></li>
+                <li style="display:<?php echo($logged['hide']);?>"><a href="<?php echo($logged['mystatuses']);?>">My statuses</a></li>
                 <li><a href="<?php echo ($allusers)?>">All users</a></li>
                 <li><a href="<?php echo($maps)?>">Maps</a></li>
                 <li><a href="<?php echo($about)?>">About</a></li>
