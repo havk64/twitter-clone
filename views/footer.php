@@ -4,7 +4,7 @@
                      
                <ul class="footer-menu">
                 <li><a href="<?php echo($home);?>">Home</a></li>
-                <li><a href="<?php echo($mystatuses);?>">My statuses</a></li>
+                <li style="display:<?php echo($logged['hide']);?>"><a href="<?php echo($logged['mystatuses']);?>">My statuses</a></li>
                 <li><a href="<?php echo ($allusers)?>">All users</a></li>
                 <li><a href="<?php echo($maps)?>">Maps</a></li>
                 <li><a href="<?php echo($about)?>">About</a></li>
