@@ -128,12 +128,12 @@ $about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness.php";
                 
                 <div> <!-- Beginning of Php content -->
                <?php foreach ($statuses as $status) { 
-    $user = $status['user_id'];
-    $userdata = getUser($user, $users);
-    $name = $userdata['full_name'];
-    $img = $userdata['img'];
-    $id = $status['id'];
-    $stat = $status['status'];
+                        $user = $status['user_id'];
+                        $userdata = getUser($user, $users);
+                        $name = $userdata['full_name'];
+                        $img = $userdata['img'];
+                        $id = $status['id'];
+                        $stat = $status['status'];
                     ?>
                    <section> <!-- Section of PHP Content -->
                    <h1><?php echo( $name );?></h1>
