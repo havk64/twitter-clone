@@ -5,7 +5,7 @@ $cookie = hasCookie($_COOKIE['login'], $users); //Assigning the variable to chec
 if($cookie){
     $current_user = $cookie;
 }
-$current_user = $users[0];
+
 $home = "index.php";
 $showhide = showHide($current_user);
 $allusers = "allusers.php";
