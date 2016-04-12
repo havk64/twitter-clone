@@ -114,11 +114,12 @@ $logged = logged($current_user);
                         $img = $userdata['img']; //Image of this same user.
                         $id = $status['id']; // The id of actual status.
                         $stat = $status['status']; // The actual status.
+                        $date = $status['date'];
                     ?>
                    <section> <!-- Section of PHP Content -->
                    <h1><?php echo( $name );?></h1>
                    <img src="<?php echo($img);?>"alt="<?php echo($name);?>">
-                   <p>in 02/05/2016</p>
+                   <p><?php echo("in: ". $date);?></p>
                    <p><?php echo($stat);?></p>
                    <div class="clearfix"></div>
                    <a data-index="<?php echo($id);?>" class="replyLink">Reply</a>
@@ -132,12 +133,11 @@ $logged = logged($current_user);
                    </form>
                    </section>        <!-- / End of Php template -->
                    <?php } ?>
-                   <?php echo("End of Php content!");?>
+                   <?php <? echo("Beginning of JSON content");?>
                     <!-- Replacing old statuses content with php template -->
                     
                 </div>
-            <!-- End of Statuses -->
-                      <? echo("Beginning of JSON content");?>
+            <!-- End of default Statuses -->
                       
                        <div id="extrastatuses"></div>
                        <div id="template"></div>
