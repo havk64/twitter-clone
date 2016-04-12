@@ -9,7 +9,6 @@ $Password = $_POST['password']; //The same for Post password params.
 $check = userExists($Login, $Password, $users); //Assigning the variable to check authentication.
 $cookie = hasCookie($_COOKIE['login'], $users); //Assigning the variable to check if has cookie.
 ?>
- <!-- ============================================== -->
  
 <?php //Control flow for authentication.
 $show = '';    
@@ -28,7 +27,7 @@ if(isset ($Login)) //If the user tried to login.
     $message = "<h1>Hello, " . $current_user['full_name'] . "</h1><br>(Has Cookie!)";
 }
 else { //If user don't tried to login.
-    $message = "<p>Hello, there!<br>(No login information - no cookie too.)</p>";
+    $message = "<p>Hello, there!<br>(No login information - no cookie either )</p>";
     $show = '';
 }
 
@@ -39,8 +38,6 @@ $allusers = "allusers.php";
 $maps = "maps.php";
 $about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness.php";
 ?> 
- <!-- ============================================== -->
- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -72,18 +69,15 @@ $about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness.php";
 
         <article id="article">
             <div class="seeMore" style="display:
-            <?php 
-                         if( $show ) { // It's going to show "Invalid Credentials" if needed.
-                             echo("block;");
-                         } else {
-                             echo("none;"); //Otherwise will be hidden.
-                         }
-                     ?>">Invalid credentials</div>
+            <?php if( $show ) { // It's going to show "Invalid Credentials" if needed.
+                    echo("block;");
+                    } else { 
+                        echo("none;"); //Otherwise will be hidden.
+                    }?>">Invalid credentials</div>
              <div><?php
                  echo($message);
              ?></div>
-             <br>
-              <p><?php /* ===>>> Code of previous task(4). Left for grade purposes. <<<==
+              <?php /* ===>>> Code of previous task(4). Left for grade purposes. <<<==
                     if(isset ($_POST['login'])) 
                   {
                       	echo("<h1>" . "Hello, " . $_POST['login'] . "</h1>");
@@ -93,9 +87,7 @@ $about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness.php";
                   else { 
                       echo("Hello, there!");
                   }*/ 
-                  ?></p>
-                  <p><?php/* echo($_COOKIE['login'].' '. $cookie['login']. $_COOKIE)*/ ?></p>
-                  <br>
+                  ?>
                   <p>  
                        <?php 
                       $current = (isset ($current_user)) ? $current_user['full_name'] : 'undefined';
