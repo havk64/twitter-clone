@@ -36,7 +36,7 @@ $id = $current_user['id']; // The actual status.
                   <div style="margin-top:50px;"><h1>
                    <?php
                    if($current_user){
-                       echo("Welcome, " . $current_user['full_name']);
+                       echo("Welcome to your profile page, " . $current_user['full_name']);
                    }
                    ?></h1>
            </div>
