@@ -133,7 +133,7 @@ $logged = logged($current_user);
                    </form>
                    </section>        <!-- / End of Php template -->
                    <?php } ?>
-                   <?php <? echo("Beginning of JSON content");?>
+                   <?php echo("( Beginning of JSON content )");?>
                     <!-- Replacing old statuses content with php template -->
                     
                 </div>
