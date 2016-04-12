@@ -58,6 +58,7 @@ $logged = logged($current_user);
     <script src="js/handlebars-v4.0.4.js"></script> <!-- Handlebars script -->
     <script src="js/task5.js"></script>
     <script src="js/weather.js"></script>
+    <script src="js/geolocation.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Tells the browser the width of screen -->
 </head>
 <body>
@@ -93,12 +94,12 @@ $logged = logged($current_user);
            <a id="show-hide">Post a status</a>
             <section id="form">
                <!-- <label for="status"></label> <= In case we can use label for the form... --> 
-                <form id="status" action="POST" method="post" title="post">
+                <form id="status" method="POST" title="post">
                     <fieldset>
                       <legend>Post</legend>
                        <textarea name="input" cols="30" rows="10" title="input"></textarea>
-                        <label><input name="checkbox" type="checkbox">include location</label>
-                        <button type="submit" value="SEND">Post</button>
+                        <label><input id="includeLocation" name="checkbox" type="checkbox">include location</label>
+                        <button id="sendButton" type="submit" value="SEND">Post</button>
                     </fieldset> 
                 </form>
             </section>
