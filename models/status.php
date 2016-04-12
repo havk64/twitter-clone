@@ -1,4 +1,4 @@
-<?
+<?php
 $statuses = [
     array("id" => 1, "user_id" => 1, "status" => "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero suscipit qui necessitatibus ad fugit voluptatum assumenda vel iusto, adipisci quam! Explicabo totam officia blanditiis. Reprehenderit animi dolorem odit hic voluptatibus." ),
     array("id" => 2, "user_id" => 2, "status" => "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero suscipit qui necessitatibus ad fugit voluptatum assumenda vel iusto, adipisci quam! Explicabo totam officia blanditiis. Reprehenderit animi dolorem odit hic voluptatibus." ),

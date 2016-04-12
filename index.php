@@ -1,6 +1,6 @@
 <?php 
 include_once "models/user.php"; //Including information about registered users.
-include_once "models/status.php"; //Including information about registered users.
+include_once "models/status.php"; //Including statuses information.
 ?>
  
 <?php //Assigning some variables
@@ -98,8 +98,8 @@ $about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness.php";
                   <br>
                   <p>  
                        <?php 
-                      $id = (isset ($current_user)) ? $current_user['full_name'] : 'undefined';
-                      echo("Current user is: ". $id );/*
+                      $current = (isset ($current_user)) ? $current_user['full_name'] : 'undefined';
+                      echo("Current user is: ". $current );/*
                        if(!isset($_COOKIE['login'])) { // Checking for cookies for debugging purposes. <<<=
                            echo "Cookie named '" . $_COOKIE['login'] . "' is not set!";
                        } else {
@@ -137,12 +137,12 @@ $about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness.php";
                     ?>
                    <section> <!-- Section of PHP Content -->
                    <h1><?php echo( $name );?></h1>
-                   <img src="<? echo($img);?>"alt="<? echo($name);?>">
+                   <img src="<?php echo($img);?>"alt="<?php echo($name);?>">
                    <p>in 02/05/2016</p>
-                   <p><? echo($stat);?></p>
+                   <p><?php echo($stat);?></p>
                    <div class="clearfix"></div>
-                   <a data-index="<? echo($id);?>" class="replyLink">Reply</a>
-                   <form id="<? echo($id);?>" action="POST" method="post" class="reply">
+                   <a data-index="<?php echo($id);?>" class="replyLink">Reply</a>
+                   <form id="<?php echo($id);?>" action="POST" method="post" class="reply">
                        <fieldset>
                        <textarea name="input">   
                        </textarea>
@@ -151,8 +151,8 @@ $about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness.php";
                        </fieldset>
                    </form>
                    </section>        <!-- / End of Php template -->
-                   <? } ?>
-                   <? echo("End of Php content!");?>
+                   <?php } ?>
+                   <?php echo("End of Php content!");?>
                     <!-- Replacing old statuses content with php template -->
                     
                 </div>
