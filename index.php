@@ -88,18 +88,6 @@ $showhide = showHide($current_user);
                       echo("Hello, there!");
                   }*/ 
                   ?>
-                  <p>  
-                       <?php 
-                      $current = (isset ($current_user)) ? $current_user['full_name'] : 'undefined';
-                      echo("Current user is: ". $current );/*
-                       if(!isset($_COOKIE['login'])) { // Checking for cookies for debugging purposes. <<<=
-                           echo "Cookie named '" . $_COOKIE['login'] . "' is not set!";
-                       } else {
-                           echo "Cookie '" . $_COOKIE['login'] . "' is set!<br>";
-                           echo "Value is: " . $_COOKIE['login'];
-                       }*/
-                       ?>
-                  </p>
                   <br>
                   
            <a id="show-hide">Post a status</a>
