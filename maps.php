@@ -2,8 +2,9 @@
    
     include_once "models/user.php"; //Including information about registered users.
 ?>
- <html>
+ <html lang="en">
   <head>
+   <title>Geolocation Maps by HERE.</title>
     <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     <script src="http://js.api.here.com/v3/3.0/mapsjs-core.js"
 	    type="text/javascript" charset="utf-8"></script>

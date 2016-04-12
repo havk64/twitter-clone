@@ -125,7 +125,8 @@ $logged = logged($current_user);
                    <a data-index="<?php echo($id);?>" class="replyLink">Reply</a>
                    <form id="<?php echo($id);?>" action="POST" method="post" class="reply">
                        <fieldset>
-                       <textarea name="input">   
+                       <legend>Reply</legend>
+                       <textarea title="input" name="input">   
                        </textarea>
                        <label><input name="checkbox" type="checkbox">include location</label>
                         <button type="submit" value="SEND">Post</button>

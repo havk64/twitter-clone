@@ -2,6 +2,7 @@
 include_once "models/user.php"; //Including information about registered users.
 include_once "models/status.php"; //Including statuses information.
 $cookie = hasCookie($_COOKIE['login'], $users); //Assigning the variable to check if has cookie.
+$current_user = array("id" => 0, "name" => "Jokerman", "img" => "http://jpgfun.com/view/joker_man_dark_knight_joker_1dhldhukf.jpg", "bio" => "The department of of Justice describes him as “the most wanted computer criminal in United States history.” His exploits were detailed in two movies: Freedom Downtime and Takedown. He started out exploiting the Los Angeles bus punch card system to get free rides. Then, like Apple co-founder Steve Wozniak, dabbled in phone phreaking. Although there were numerous offenses, Mitnick was ultimately convicted for breaking into the Digital Equipment Corporation’s computer network and stealing software.Today, Mitnick has been able to move past his role as a black hat hacker and become a productive member of society. He served five years, about 8 months of it in solitary confinement, and is now a computer security consultant, author and speaker.");
 if($cookie){
     $current_user = $cookie;
 }
@@ -11,7 +12,7 @@ $logged = logged($current_user);
 $allusers = "allusers.php";
 $maps = "maps.html";
 $about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness.php";
-$name = $current_user['full_name']; //Full Name of user that post this status.
+$name = ($current_user['name']); //Full Name of user that post this status.
 $img = $current_user['img']; //Image of this same user.
 $bio = $current_user['bio']; // The id of actual status.
 $id = $current_user['id']; // The actual status.
@@ -20,7 +21,7 @@ $id = $current_user['id']; // The actual status.
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Twitter clone</title>
+    <title>Profile page</title>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="icon" href="img/favicon.ico">
@@ -35,10 +36,13 @@ $id = $current_user['id']; // The actual status.
     <main>
                   <div style="margin-top:50px;"><h1>
                    <?php
-                   if($current_user){
-                       echo("Welcome to your profile page, " . $current_user['full_name']);
-                   }
-                   ?></h1>
+                   if($current_user['id'] != 0 ){
+                       echo("Welcome to your profile page, " . $name);
+                   } else {
+                       echo("Can't be possible to access this page without login!");
+                      ?></h1>
+                       <p><?php echo('( Are you a Hacker? &#128561; )');
+                   } ?></p>
            </div>
            <article>
                    <section> <!-- Section of PHP Content -->

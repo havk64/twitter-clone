@@ -31,6 +31,8 @@ $about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness.php";
                    <?php
                    if($current_user){
                        echo("You are currently logged in as: " . $current_user['full_name']);
+                   } else {
+                       echo("Welcome, Guest!");
                    }
                    ?></h1>
            </div>
