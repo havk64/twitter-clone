@@ -39,7 +39,7 @@ function callback(data){ // => Callback function used to wrap the result of requ
             break;
         case "sunny":
             console.log("Yessss!!!");
-            pweather.style.background = "url(http://bettybread.ca/wp-content/uploads/2013/08/sunny.jpg)";
+            pweather.style.background = "url(img/sunny.jpg)";
             break;
         case "cloudy":
             console.log("It's ok...");
