@@ -1,0 +1,373 @@
+@import "reset"
+
+$main_color: #006060
+$box_shadow: rgba(0, 0, 0, 0.75)
+
+%header
+    position: fixed
+    top: 0px
+    left: 0px
+    right: 0px
+    height: 50px
+    z-index: 1000
+    background-color: white
+    -webkit-box-shadow: 0px 5px 20px -5px $box_shadow
+    -moz-box-shadow: 0px 5px 20px -5px $box_shadow
+    box-shadow: 0px 5px 20px -5px $box_shadow
+
+%footer 
+  -webkit-order: 0
+  order: 0
+  -webkit-flex: 0 1 auto
+  -ms-flex: 0 1 auto
+  flex: 0 1 auto
+  -webkit-align-self: auto
+  align-self: auto
+
+%gradient
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from($main_color), to(teal))
+  background: -webkit-linear-gradient(top, $main_color, teal)
+  background: -moz-linear-gradient(top, $main_color, teal)
+  background: -ms-linear-gradient(top, $main_color, teal)
+  background: -o-linear-gradient(top, $main_color, teal)
+
+body
+  font-family: 'Open Sans', sans-serif
+  background: #fbfbfb
+  position: relative
+
+p
+  line-height: 21px
+
+#header
+  width: 94%
+  padding: 3%
+  display: flex
+  display: -webkit-flex
+  /* Safari
+  -webkit-flex-direction: row
+  /* Safari
+  flex-direction: row
+  justify-content: space-between
+
+.container
+  background: #fff
+  min-height: 600px
+  max-width: 1200px
+  margin: 0 auto
+  padding: 20px
+
+.logo
+  width: 70px
+  font-size: 11px
+  text-align: center
+  /*float: left; => for use flexbox, instead of floats
+  img
+    width: 100%
+    height: auto
+    margin-bottom: 0px
+
+.top-menu
+  order: 3
+  /*float: right; => for use flexbox, instead of floats
+  margin-top: 30px
+  li
+    display: inline
+    &:after
+      content: ' | '
+    &:last-child:after
+      content: ''
+  a
+    color: #434343
+    text-decoration: none
+    font-size: 14px
+
+.main-menu a
+  color: #434343
+  text-decoration: none
+  font-size: 14px
+
+ul
+  &.main-menu, &.footer-menu
+    width: 520px
+    /*I could use JS to get the width set dynamically to the content
+    margin: 0 auto
+    /*This will make sure we are in the exact middle. Only problem is we have to set a width and that is not dynamic
+    list-style: none
+    padding-top: 20px
+    padding-bottom: 10px
+  &.main-menu li, &.footer-menu li
+    display: inline
+    /*float: left; => for use flexbox, instead of floats
+    margin: 5px
+
+.main-menu li a
+  background: #008080
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(teal), to($main_color))
+  background: -webkit-linear-gradient(top, teal, $main_color)
+  background: -moz-linear-gradient(top, teal, $main_color)
+  background: -ms-linear-gradient(top, teal, $main_color)
+  background: -o-linear-gradient(top, teal, $main_color)
+  border: 1px solid #006a6a
+  color: #fff
+  padding: 5px 15px
+  -webkit-border-radius: 3px
+  -moz-border-radius: 3px
+  border-radius: 3px
+  &:hover
+    @extend %gradient
+
+.footer-menu li a:hover
+  @extend %gradient
+
+.main-menu li a:active
+  background: #008080 !important
+
+.footer-menu li a
+  background: #003180
+  color: #fff
+  padding: 5px 15px
+  -webkit-border-radius: 3px
+  -moz-border-radius: 3px
+  border-radius: 3px
+
+.clearfix
+  clear: both
+
+article
+  display: block
+  float: left
+  width: 64%
+  padding: 3%
+  section
+    margin-bottom: 30px
+    padding: 10px
+    -webkit-border-top-right-radius: 10px
+    -webkit-border-bottom-right-radius: 10px
+    -moz-border-top-right-radius: 10px
+    -moz-border-bottom-right-radius: 10px
+    border-top-right-radius: 10px
+    border-bottom-right-radius: 10px
+    background: rgba(0, 106, 106, 0.55)
+    &:nth-child(even)
+      background: rgba(0, 106, 106, 0.28)
+  > section > img
+    float: left
+    width: 150px
+    height: auto
+    margin: 0 10px 0 0
+
+aside section > img
+  width: 100%
+  margin-bottom: 10px
+
+article section > p
+  line-height: 25px
+
+section
+  h1, > p:first-of-type
+    display: inline
+
+aside
+  width: 24%
+  display: block
+  float: right
+  padding: 3%
+  .title
+    background: #006a6a
+    color: #ffffff
+    padding: 10px 15px
+  ul li
+    padding: 10px 0 10px 0
+    border-bottom: 1px dotted #cccccc
+  section
+    margin-bottom: 20px
+
+h1, h2, h3, h4, h5, h6
+  font-weight: bold
+  color: #008080
+  margin: 0 0 10px 0
+
+h1
+  font-size: 22px
+
+a
+  text-decoration: none
+  &:hover
+    text-decoration: underline
+
+#bottom-right
+  color: #fff
+  position: fixed
+  right: 10px
+  bottom: 10px
+  background-color: rgba(255, 0, 0, 0.56)
+  padding: 15px
+  -webkit-border-radius: 5px
+  -moz-border-radius: 5px
+  border-radius: 5px
+
+.show-medium, #form, .reply
+  display: none
+
+.outer-menu-container
+  width: 338px
+  margin-top: auto
+  align-self: flex-end
+  -webkit-align-self: flex-end
+
+#all-images
+  position: absolute
+  top: 10px
+  right: 20px
+
+img
+  float: left
+  width: 150px
+  height: auto
+  margin: 0 10px 0 0
+
+td
+  display: table-cell
+  margin: 10px
+  padding: 5px
+
+.seeMore
+  background-color: red
+  padding: 10px
+  text-align: center
+  color: white
+  border-radius: 5px
+
+#pweather
+  padding: 10px
+  text-align: center
+  border-radius: 5px
+  border: 1px solid silver
+
+#footer
+  position: absolute
+  height: 10px
+  width: 94%
+  color: #fff
+  padding: 3%
+  right: 0px
+  left: 0px
+  bottom: -70px
+  background: url(img/dark-background.jpg)
+  display: -ms-flexbox
+  display: -webkit-flex
+  display: flex
+  -webkit-flex-direction: row
+  -ms-flex-direction: row
+  flex-direction: row
+  -webkit-flex-wrap: nowrap
+  -ms-flex-wrap: nowrap
+  flex-wrap: nowrap
+  -webkit-justify-content: space-between
+  justify-content: space-between
+  -webkit-align-content: stretch
+  align-content: stretch
+  -webkit-align-items: center
+  align-items: center
+
+footer >
+  .footer-left
+    font-size: 11px
+    font-weight: bold
+    float: left
+    color: white
+    @extend %footer
+  .footer-center
+    @extend %footer
+    
+  .footer-right
+    @extend %footer
+
+legend
+  /* Hidden the legend element that is used just for accessibility.
+  position: absolute
+  clip: rect(1px 1px 1px 1px)
+  /* for Internet Explorer
+  clip: rect(1px, 1px, 1px, 1px)
+  padding: 0
+  border: 0
+  height: 1px
+  width: 1px
+  overflow: hidden
+
+.footer-right > a > img
+  height: 20px
+  width: 20px
+
+.hidden
+  display: none
+
+@media all and (max-width: 768px)
+  aside
+    width: 94%
+    padding: 3%
+    section > img
+      width: 30%
+      float: left
+  article
+    width: 94%
+    padding: 3%
+  .logo
+    float: none
+    margin: 0 auto
+  .top-menu
+    margin: 20px auto
+    width: 170px
+    /*float: none; => Using flexbox instead
+  .main-menu li a
+    font-size: 12px
+  .outer-menu-container
+    width: 338px
+    margin-top: auto
+  #header
+    position: relative
+    width: 94%
+    padding: 3%
+    display: flex
+    display: -webkit-flex
+    /* Safari
+    -webkit-flex-direction: row
+    /* Safari
+    flex-direction: row
+    justify-content: space-between
+
+@media all and (min-width: 768px) and (max-width: 992px)
+  /*medium size
+  article
+    width: 94%
+    padding: 3%
+    float: none
+    margin-bottom: 0
+  aside
+    margin-top: 0
+    width: 94%
+    float: none
+    section
+      width: 32%
+      float: left
+      margin-right: 10px
+      &.show-medium
+        width: 28%
+        display: block
+        margin-right: 0
+        color: #fff
+        background-color: rgba(255, 0, 0, 0.56)
+        padding: 15px
+        -webkit-border-radius: 5px
+        -moz-border-radius: 5px
+        border-radius: 5px
+    .clearfix
+      clear: none
+  #header
+    @extend %header
+
+@media all and (min-width: 992px) and (max-width: 2600px)
+  /* medium and large screens
+  #header
+    @extend %header
