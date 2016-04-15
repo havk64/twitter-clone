@@ -1,0 +1,39 @@
+@import base
+
+header
+    @include flex
+    @include header
+    div
+        width: (100% / 3)
+        text-align: center
+    div img
+        width: auto
+    ul li
+        display: inline
+    a
+        text-decoration: none
+        display: inline
+        
+    .top-menu
+        li
+            &:after
+                content: ' | '
+            &:last-child:after
+                content: ''
+            
+footer
+    @include flex
+    position: absolute
+    bottom: 0px
+    left: 0px
+    right: 0px
+    color: #fff
+    background: url(../img/dark-background.jpg)
+    div
+        width: (100% / 3)
+        text-align: center
+        //@include footer
+    ul li
+        display: inline
+    a
+        text-decoration: none

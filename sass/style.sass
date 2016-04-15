@@ -1,4 +1,4 @@
-@import "reset"
+@import compass/reset
 
 $main-color: #006060
 $box-shadow: rgba(0, 0, 0, 0.75)
@@ -109,8 +109,6 @@ ul
     margin: 0 auto
     /*This will make sure we are in the exact middle. Only problem is we have to set a width and that is not dynamic
     list-style: none
-    padding-top: 20px
-    padding-bottom: 10px
   &.main-menu li, &.footer-menu li
     display: inline
     margin: 5px
@@ -123,6 +121,7 @@ ul
   padding: 5px 15px
   @include border-radius(3px)
   &:hover
+    text-decoration: none
     @include gradient
 
 .footer-menu li a:hover
