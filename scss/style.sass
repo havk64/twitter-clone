@@ -1,7 +1,25 @@
 @import "reset"
 
-$main_color: #006060
+$main-color: #006060
 $box_shadow: rgba(0, 0, 0, 0.75)
+
+=vendor-prefixes($property, $value) 
+  -webkit-#{$property}: $value
+  -moz-#{$property}: $value
+  -ms-#{$property}: $value
+  -o-#{$property}: $value
+
+
+=border-radius($shadow)
+  border-radius: $shadow
+  @include vendor-prefixes(border-radius, $shadow)
+
+=linear-gradient($from, $to)
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from), to($to))
+  background: -webkit-linear-gradient(top, $from, $to)
+  background: -moz-linear-gradient(top, $from, $to)
+  background: -ms-linear-gradient(top, $from, $to)
+  background: -o-linear-gradient(top, $from, $to)
 
 =flex
   width: 94%
@@ -12,7 +30,7 @@ $box_shadow: rgba(0, 0, 0, 0.75)
   flex-direction: row
   justify-content: space-between
 
-@mixin header
+=header
   position: fixed
   top: 0px
   left: 0px
@@ -24,7 +42,7 @@ $box_shadow: rgba(0, 0, 0, 0.75)
   -moz-box-shadow: 0px 5px 20px -5px $box_shadow
   box-shadow: 0px 5px 20px -5px $box_shadow
 
-@mixin footer 
+=footer 
   -webkit-order: 0
   order: 0
   -webkit-flex: 0 1 auto
@@ -34,11 +52,7 @@ $box_shadow: rgba(0, 0, 0, 0.75)
   align-self: auto
 
 %gradient
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from($main_color), to(teal))
-  background: -webkit-linear-gradient(top, $main_color, teal)
-  background: -moz-linear-gradient(top, $main_color, teal)
-  background: -ms-linear-gradient(top, $main_color, teal)
-  background: -o-linear-gradient(top, $main_color, teal)
+  @include linear-gradient($main-color, teal)
 
 body
   font-family: 'Open Sans', sans-serif
@@ -105,17 +119,11 @@ ul
 
 .main-menu li a
   background: #008080
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(teal), to($main_color))
-  background: -webkit-linear-gradient(top, teal, $main_color)
-  background: -moz-linear-gradient(top, teal, $main_color)
-  background: -ms-linear-gradient(top, teal, $main_color)
-  background: -o-linear-gradient(top, teal, $main_color)
+  @include linear-gradient(teal, $main-color)
   border: 1px solid #006a6a
   color: #fff
   padding: 5px 15px
-  -webkit-border-radius: 3px
-  -moz-border-radius: 3px
-  border-radius: 3px
+  @include border-radius(3px)
   &:hover
     @extend %gradient
 
@@ -129,9 +137,7 @@ ul
   background: #003180
   color: #fff
   padding: 5px 15px
-  -webkit-border-radius: 3px
-  -moz-border-radius: 3px
-  border-radius: 3px
+  @include border-radius(3px)
 
 .clearfix
   clear: both
@@ -144,12 +150,7 @@ article
   section
     margin-bottom: 30px
     padding: 10px
-    -webkit-border-top-right-radius: 10px
-    -webkit-border-bottom-right-radius: 10px
-    -moz-border-top-right-radius: 10px
-    -moz-border-bottom-right-radius: 10px
-    border-top-right-radius: 10px
-    border-bottom-right-radius: 10px
+    @include border-radius(0px 10px 10px 0px)
     background: rgba(0, 106, 106, 0.55)
     &:nth-child(even)
       background: rgba(0, 106, 106, 0.28)
@@ -205,9 +206,7 @@ a
   bottom: 10px
   background-color: rgba(255, 0, 0, 0.56)
   padding: 15px
-  -webkit-border-radius: 5px
-  -moz-border-radius: 5px
-  border-radius: 5px
+  @include border-radius(5px)
 
 .show-medium, #form, .reply
   display: none
@@ -346,9 +345,7 @@ legend
         color: #fff
         background-color: rgba(255, 0, 0, 0.56)
         padding: 15px
-        -webkit-border-radius: 5px
-        -moz-border-radius: 5px
-        border-radius: 5px
+        @include border-radius(5px)
     .clearfix
       clear: none
   #header
