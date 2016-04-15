@@ -46,7 +46,7 @@ $logged = logged($current_user);
     <meta name="keywords" content="Unix, Software Engineer, havk64, brasil, san francisco, holberton school, C language, Go language, Ruby, Python, Javascript, Handlebars, Deep Learning, Web Development">
     <title>Twitter clone</title>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="icon" href="img/favicon.ico">
     <script src="js/post_a_status.js"></script>
     <script src="js/reply.js"></script>

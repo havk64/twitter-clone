@@ -3,19 +3,28 @@
 $main_color: #006060
 $box_shadow: rgba(0, 0, 0, 0.75)
 
-%header
-    position: fixed
-    top: 0px
-    left: 0px
-    right: 0px
-    height: 50px
-    z-index: 1000
-    background-color: white
-    -webkit-box-shadow: 0px 5px 20px -5px $box_shadow
-    -moz-box-shadow: 0px 5px 20px -5px $box_shadow
-    box-shadow: 0px 5px 20px -5px $box_shadow
+@mixin flex
+  width: 94%
+  padding: 3%
+  display: flex
+  display: -webkit-flex
+  -webkit-flex-direction: row
+  flex-direction: row
+  justify-content: space-between
 
-%footer 
+@mixin header
+  position: fixed
+  top: 0px
+  left: 0px
+  right: 0px
+  height: 50px
+  z-index: 1000
+  background-color: white
+  -webkit-box-shadow: 0px 5px 20px -5px $box_shadow
+  -moz-box-shadow: 0px 5px 20px -5px $box_shadow
+  box-shadow: 0px 5px 20px -5px $box_shadow
+
+@mixin footer 
   -webkit-order: 0
   order: 0
   -webkit-flex: 0 1 auto
@@ -36,19 +45,16 @@ body
   background: #fbfbfb
   position: relative
 
+main 
+  margin-top: 100px
+  margin-bottom: 30px
+  overflow: hidden
+
 p
   line-height: 21px
 
 #header
-  width: 94%
-  padding: 3%
-  display: flex
-  display: -webkit-flex
-  /* Safari
-  -webkit-flex-direction: row
-  /* Safari
-  flex-direction: row
-  justify-content: space-between
+  @include flex
 
 .container
   background: #fff
@@ -247,20 +253,13 @@ td
 
 #footer
   position: absolute
+  @include flex
   height: 10px
-  width: 94%
   color: #fff
-  padding: 3%
   right: 0px
   left: 0px
   bottom: -70px
-  background: url(img/dark-background.jpg)
-  display: -ms-flexbox
-  display: -webkit-flex
-  display: flex
-  -webkit-flex-direction: row
-  -ms-flex-direction: row
-  flex-direction: row
+  background: url(../img/dark-background.jpg)
   -webkit-flex-wrap: nowrap
   -ms-flex-wrap: nowrap
   flex-wrap: nowrap
@@ -269,7 +268,7 @@ td
   -webkit-align-content: stretch
   align-content: stretch
   -webkit-align-items: center
-  align-items: center
+  align-items: center 
 
 footer >
   .footer-left
@@ -277,12 +276,12 @@ footer >
     font-weight: bold
     float: left
     color: white
-    @extend %footer
+    @include footer
   .footer-center
-    @extend %footer
+    @include footer
     
   .footer-right
-    @extend %footer
+    @include footer
 
 legend
   /* Hidden the legend element that is used just for accessibility.
@@ -327,15 +326,7 @@ legend
     margin-top: auto
   #header
     position: relative
-    width: 94%
-    padding: 3%
-    display: flex
-    display: -webkit-flex
-    /* Safari
-    -webkit-flex-direction: row
-    /* Safari
-    flex-direction: row
-    justify-content: space-between
+    @include flex
 
 @media all and (min-width: 768px) and (max-width: 992px)
   /*medium size
@@ -365,9 +356,9 @@ legend
     .clearfix
       clear: none
   #header
-    @extend %header
+    @include header
 
 @media all and (min-width: 992px) and (max-width: 2600px)
   /* medium and large screens
   #header
-    @extend %header
+    @include header

@@ -1,8 +1,6 @@
-/* 
-   Sass Reset - Converted by Hampton Catlin
-   A modification of the original found at...
-   http://meyerweb.com/eric/tools/css/reset/
-*/
+/* Sass Reset - Converted by Hampton Catlin
+ * A modification of the original found at...
+ * http://meyerweb.com/eric/tools/css/reset/ */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4,
 h5, h6, p, blockquote, pre, a, abbr, acronym, address, big,
 cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small,
@@ -34,25 +32,16 @@ blockquote, q {
   quotes: none; }
 
 blockquote:before, blockquote:after {
-  content: '';
+  content: "";
   content: none; }
 
 q:before, q:after {
-  content: '';
+  content: "";
   content: none; }
 
 table {
   border-collapse: collapse;
   border-spacing: 0; }
-
-footer > .footer-left, footer > .footer-center, footer > .footer-right {
-  -webkit-order: 0;
-  order: 0;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-align-self: auto;
-  align-self: auto; }
 
 .main-menu li a:hover, .footer-menu li a:hover {
   background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#006060), to(teal));
@@ -66,6 +55,11 @@ body {
   background: #fbfbfb;
   position: relative; }
 
+main {
+  margin-top: 100px;
+  margin-bottom: 30px;
+  overflow: hidden; }
+
 p {
   line-height: 21px; }
 
@@ -74,9 +68,7 @@ p {
   padding: 3%;
   display: flex;
   display: -webkit-flex;
-  /* Safari */
   -webkit-flex-direction: row;
-  /* Safari */
   flex-direction: row;
   justify-content: space-between; }
 
@@ -270,20 +262,19 @@ td {
 
 #footer {
   position: absolute;
-  height: 10px;
   width: 94%;
-  color: white;
   padding: 3%;
+  display: flex;
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 10px;
+  color: white;
   right: 0px;
   left: 0px;
   bottom: -70px;
-  background: url(img/dark-background.jpg);
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  background: url(../img/dark-background.jpg);
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
@@ -298,7 +289,30 @@ footer > .footer-left {
   font-size: 11px;
   font-weight: bold;
   float: left;
-  color: white; }
+  color: white;
+  -webkit-order: 0;
+  order: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-align-self: auto;
+  align-self: auto; }
+footer > .footer-center {
+  -webkit-order: 0;
+  order: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-align-self: auto;
+  align-self: auto; }
+footer > .footer-right {
+  -webkit-order: 0;
+  order: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-align-self: auto;
+  align-self: auto; }
 
 legend {
   /* Hidden the legend element that is used just for accessibility. */
@@ -353,9 +367,7 @@ legend {
     padding: 3%;
     display: flex;
     display: -webkit-flex;
-    /* Safari */
     -webkit-flex-direction: row;
-    /* Safari */
     flex-direction: row;
     justify-content: space-between; } }
 @media all and (min-width: 768px) and (max-width: 992px) {
@@ -402,7 +414,6 @@ legend {
   /* medium and large screens */
   #header {
     position: fixed;
-    /* Piece of code to be transfered */
     top: 0px;
     left: 0px;
     right: 0px;
@@ -411,5 +422,4 @@ legend {
     background-color: white;
     -webkit-box-shadow: 0px 5px 20px -5px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 5px 20px -5px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 5px 20px -5px rgba(0, 0, 0, 0.75);
-    /* ==> End... */ } }
+    box-shadow: 0px 5px 20px -5px rgba(0, 0, 0, 0.75); } }
