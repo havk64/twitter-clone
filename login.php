@@ -17,7 +17,7 @@ $about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness.php";
     <title>Twitter clone</title>
     <link rel="icon" href="img/favicon.ico">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
     <script src="js/sticky_smart_header.js"></script>
     <script src="js/weather.js"></script>
 </head>
