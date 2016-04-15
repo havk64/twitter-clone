@@ -47,6 +47,15 @@ $logged = logged($current_user);
     <title>Twitter clone</title>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    
+    <!-- Inserted by Compass -->
+<!--       <link href="/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> -->
+  <link href="/css/print.css" media="print" rel="stylesheet" type="text/css" />
+  <!--[if IE]>
+      <link href="/css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <![endif]-->
+   <!-- End of Compass inclusion -->
+    
     <link rel="icon" href="img/favicon.ico">
     <script src="js/post_a_status.js"></script>
     <script src="js/reply.js"></script>
