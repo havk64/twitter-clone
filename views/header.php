@@ -2,7 +2,6 @@
     <header id="header">
         <div class="logo">
             <img src="img/logo.png" alt="Logo"/>
-            <p>Likable Stats</p>
         </div>
 
         
@@ -26,7 +25,7 @@
                 <li><a href="/logout.php">Logout</a></li>
             </ul>
         </div>
-       <!--  <button id="all-images" type="submit" value="Send">All images on this pages</button> -->
+         <button id="all-images" type="submit" value="Send">All images on this pages</button>
         
         
 
