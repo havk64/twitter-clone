@@ -7,7 +7,7 @@ if($cookie){
 $home = "index.php";
 $logged = logged($current_user);
 $allusers = "allusers.php";
-$maps = "maps.html";
+$maps = "maps.php";
 $about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness.php";
 ?>
 <!DOCTYPE html>
