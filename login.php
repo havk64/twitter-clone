@@ -29,13 +29,12 @@ $about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness.php";
     <main>
         <article>
            <div style="margin-top: 50px"><h1>
-                   <?php
-                   if($current_user){
-                       echo("You already are logged in as: " . $current_user['full_name']);
-                   } else {
-                       echo("Welcome, Guest!");
-                   }
-                   ?></h1>
+                   <?php if($current_user): ?>
+                   You already are logged in as:  <?php echo($current_user['full_name']); ?>
+                   <?php else: ?>
+                   Welcome, Guest!
+                   <?php endif; ?>
+                   </h1>
            </div>
             <section id="login">
                <!-- <label for="status"></label> <= In case we can use label for the form... --> 
