@@ -1,11 +1,16 @@
 @import compass/reset
 
+$main-color: #006060
+    
 =vendor-prefixes($property, $value) 
     #{$property}: $value
     -o-#{$property}: $value
     -ms-#{$property}: $value
     -moz-#{$property}: $value
     -webkit-#{$property}: $value
+
+=border-radius($shadow)
+    @include vendor-prefixes(border-radius, $shadow)
 
 =flex
     width: 94%
@@ -14,6 +19,7 @@
     display: -webkit-flex
     -webkit-flex-direction: row
     flex-direction: row
+    -webkit-justify-content: space-between
     justify-content: space-between
 
 =header
@@ -34,3 +40,13 @@
     flex: 0 1 auto
     -webkit-align-self: auto
     align-self: auto
+    
+=linear-gradient($from, $to)
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from), to($to))
+    background: -webkit-linear-gradient(top, $from, $to)
+    background: -moz-linear-gradient(top, $from, $to)
+    background: -ms-linear-gradient(top, $from, $to)
+    background: -o-linear-gradient(top, $from, $to)
+    
+=gradient
+    @include linear-gradient($main-color, teal)
