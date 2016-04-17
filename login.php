@@ -28,7 +28,7 @@ $about = "Impossible-Octopus-Fitness/Impossible-Octopus-Fitness.php";
 
     <main>
         <article>
-           <div style="margin-top: 50px"><h1>
+           <div class="message"><h1>
                    <?php if($current_user): ?>
                    You already are logged in as:  <?php echo($current_user['full_name']); ?>
                    <?php else: ?>

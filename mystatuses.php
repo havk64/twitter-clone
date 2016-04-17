@@ -34,7 +34,7 @@ $id = $current_user['id']; // The actual status.
 <?php include("views/header.php"); ?>   <!-- Replacing the header with its Php partial -->
 
     <main>
-                  <div style="margin-top:50px;"><h1>
+                  <div class="message"><h1>
                    <?php
                    if($current_user['id'] != 0 ){
                        echo("Welcome to your profile page, " . $name);
