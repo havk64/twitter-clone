@@ -12,6 +12,11 @@ function writeUsers($users){
     fclose($fp);
 }
 
+function createUser($user) {
+    $users = listUsers();
+    array_push($users, $user);
+    writeUsers($users);
+}
 ?>
 <?php //Defining the function to check the user information.
 function userExists($login, $password, $users) 
