@@ -5,6 +5,13 @@ function listUsers(){
     return $parsed;
 }
 $users = listUsers();
+
+function writeUsers($users){
+    $fp = fopen('./data/test.json', 'w');
+    $fwrite($fp, json_decode($users));
+    fclose($fp);
+}
+
 ?>
 <?php //Defining the function to check the user information.
 function userExists($login, $password, $users) 
